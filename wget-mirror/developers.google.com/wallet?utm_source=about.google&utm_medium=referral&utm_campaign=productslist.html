@@ -1,0 +1,6472 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/wallet"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/wallet" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/wallet" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/wallet?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/wallet?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/wallet?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/wallet?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/wallet?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/wallet?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/wallet?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/wallet?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/wallet?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/wallet?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/wallet?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/wallet?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/wallet?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/wallet?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/wallet?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/wallet?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/wallet?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/wallet?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/wallet?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/wallet?hl=vi" /><title>Google Wallet &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Google Wallet &nbsp;|&nbsp; Google for Developers"><meta name="description" content="Google Wallet is a secure container that allows users to add everyday things on their Android device and enables developers to securely store and provide easy access to wallet objects across Android and the broader Google ecosystem.
+">
+  <meta property="og:description" content="Google Wallet is a secure container that allows users to add everyday things on their Android device and enables developers to securely store and provide easy access to wallet objects across Android and the broader Google ecosystem.
+"><meta property="og:url" content="https://developers.google.com/wallet"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/images/opengraph/google-blue.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": ""
+  }
+</script>
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class="color-scheme--light"
+        template="landing"
+        theme="google-blue"
+        type="article"
+        
+        
+        
+        layout="full"
+        
+        
+        
+        
+        
+          
+            concierge='hide'
+          
+        
+        
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/wallet">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Google Wallet"
+           src="https://developers.google.com/static/wallet/images/wallet-icon.png"
+           srcset="https://developers.google.com/static/wallet/images/wallet-icon_36.png 36w, https://developers.google.com/static/wallet/images/wallet-icon_48.png 48w, https://developers.google.com/static/wallet/images/wallet-icon_72.png 72w, https://developers.google.com/static/wallet/images/wallet-icon_96.png 96w, https://developers.google.com/static/wallet/images/wallet-icon_480.png 480w, https://developers.google.com/static/wallet/images/wallet-icon_720.png 720w, https://developers.google.com/static/wallet/images/wallet-icon_856.png 856w, https://developers.google.com/static/wallet/images/wallet-icon_960.png 960w, https://developers.google.com/static/wallet/images/wallet-icon_1440.png 1440w, https://developers.google.com/static/wallet/images/wallet-icon_1920.png 1920w, https://developers.google.com/static/wallet/images/wallet-icon_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/wallet"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Wallet"
+      
+    >
+    
+          <h1 class="devsite-product-name"><svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Wallet</h1>
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - documentation"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Documentation"
+         
+           track-name="documentation"
+         
+       >
+    Documentation
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Access</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/access"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access/digital-car-key/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access/digital-car-key/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/access/digital-car-key/overview"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Digital Car Keys
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Lock, unlock, and start your car from an Android-powered device
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access/campus-id/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access/campus-id/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/access/campus-id/get-started/overview"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Campus IDs
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Identify users, grant building access, and enable payment
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access/corporate-badge/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access/corporate-badge/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/access/corporate-badge/get-started/overview"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Corporate Badges
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Identify employees and grant them access to workplace resources
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access/hotel-key/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access/hotel-key/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/access/hotel-key/get-started/overview"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Hotel Keys
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Enable digital hotel key experiences for guests
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/access/multi-family-key/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/access/multi-family-key/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="access"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/access/multi-family-key/get-started/overview"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Multi-family Keys
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Enable digital multi-family residential keys
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Health</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/health"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/health"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="health"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/health"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/generic-private-pass"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/generic-private-pass"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="health"
+                     
+                     tooltip
+                  
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/health/vaccine-cards"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Health Insurance Cards
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Users can store a digital copy of their health insurance card in Google Wallet on their Android-powered device
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/health/test-records"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/health/test-records"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="health"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/health/test-records"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Test Records
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Securely store and display COVID-19 testing records
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/health/vaccine-cards"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/health/vaccine-cards"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="health"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/health/vaccine-cards"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      COVID Cards
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Securely store and display COVID-19 vaccination records
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Identity</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/identity"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/identity"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="identity"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/identity"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/identity/provisioning"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/identity/provisioning"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="identity"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/identity/provisioning/"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Provisioning Digital Credentials
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Provision Digital Credentials into Google Wallet
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/identity/verify/accepting-ids-from-wallet-online"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/identity/verify/accepting-ids-from-wallet-online"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="identity"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/identity/verify/accepting-ids-from-wallet-online"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Verify with Google Wallet
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Present credentials on Android-powered devices
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Retail</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/retail"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/retail"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="retail"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/retail"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/retail/gift-cards"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/retail/gift-cards"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="retail"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/retail/gift-cards"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gift Cards
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Add and redeem gift cards in-store and online
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/retail/loyalty-cards"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/retail/loyalty-cards"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="retail"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/retail/loyalty-cards"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Loyalty Cards
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Access rewards and purchase history
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/retail/offers"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/retail/offers"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="retail"
+                     
+                     tooltip
+                  
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/retail/offers"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Offers
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Add offers from your web site or app
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/pay/issuers"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/pay/issuers"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="retail"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/pay/issuers"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      In-store payments
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Enable fast, simple checkout experiences
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Tickets and transit</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/tickets"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets/boarding-passes"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets/boarding-passes"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/tickets/boarding-passes"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Boarding Passes
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Add boarding passes and receive real-time flight updates
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets/events"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets/events"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/tickets/events"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Event Tickets
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Enter venues using barcodes, QR codes, or NFC
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets/closed-loop/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets/closed-loop/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/tickets/closed-loop/get-started/overview"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Closed Loop Transit Passes
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Use virtual transit cards to travel and manage account balances
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets/open-loop/get-started/overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets/open-loop/get-started/overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/tickets/open-loop/get-started/overview"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Open Loop Transit Passes
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Use credit and debit cards with rich transit receipts
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/tickets/transit-passes"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/tickets/transit-passes"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="tickets and transit"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/tickets/transit-passes"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Transit Passes
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Replace paper tickets and reduce fraud
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Generic</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/generic-overview"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/generic-overview"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="generic"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/generic-overview"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Overview
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/generic"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/generic"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="generic"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="/wallet/generic"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Generic pass
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Create your own unique pass experiences in Google Wallet
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/generic-private-pass"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/generic-private-pass"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="generic"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/generic-private-pass"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Generic private pass
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Create a generic private pass for more sensitive user data, such as health insurance cards
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Other Resources</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/smart-tap"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/smart-tap"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="other resources"
+                     
+                     tooltip
+                  
+                    
+                     data-label="/wallet/smart-tap"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Smart Tap
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      Enable pass redemption via NFC tap
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/wallet/docs/release-notes"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/wallet/docs/release-notes"
+                     track-metadata-position="nav - documentation"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="other resources"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="/wallet/docs/release-notes"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release Notes
+                    </div>
+                    
+                    <div class="devsite-nav-item-description">
+                      View Google Wallet release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.googleblog.com/search/?query=wallet"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.googleblog.com/search/?query=wallet"
+    
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="wallet"
+         
+           data-label="https://developers.googleblog.com/search/?query=wallet"
+         
+           track-name="blog"
+         
+           data-action="upper-tab-click"
+         
+       >
+    Blog
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/wallet/events"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/wallet/events"
+    
+       track-type="nav"
+       track-metadata-position="nav - events"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="wallet"
+         
+           data-label="/wallet/events"
+         
+           track-name="events"
+         
+           data-action="upper-tab-click"
+         
+       >
+    Events
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/wallet/partners"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/wallet/partners"
+    
+       track-type="nav"
+       track-metadata-position="nav - for business"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: For Business"
+         
+           track-name="for business"
+         
+       >
+    For Business
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - community"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Community"
+         
+           track-name="community"
+         
+       >
+    Community
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://stackoverflow.com/questions/tagged/google-wallet"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://stackoverflow.com/questions/tagged/google-wallet"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="https://stackoverflow.com/questions/tagged/google-wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      StackOverflow
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://github.com/google-wallet"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://github.com/google-wallet"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="https://github.com/google-wallet"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      GitHub
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://www.youtube.com/@GooglePay"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://www.youtube.com/@GooglePay"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-label="https://www.youtube.com/@GooglePay"
+                    
+                     data-category="wallet"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      YouTube
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://twitter.com/googlepaydevs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://twitter.com/googlepaydevs"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                     data-category="wallet"
+                    
+                     data-label="https://twitter.com/googlepaydevs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      X (Twitter)
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://goo.gle/payments-dev-community"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://goo.gle/payments-dev-community"
+                     track-metadata-position="nav - community"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-label="https://goo.gle/payments-dev-community"
+                    
+                     data-category="wallet"
+                    
+                     data-action="upper-tab-dropdown-click"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Discord
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Google Wallet"
+    tenant-name="Google for Developers"
+    project-scope="/wallet"
+    url-scoped="https://developers.google.com/s/results/wallet"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars hidden>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/wallet">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Google Wallet"
+           src="https://developers.google.com/static/wallet/images/wallet-icon.png"
+           srcset="https://developers.google.com/static/wallet/images/wallet-icon_36.png 36w, https://developers.google.com/static/wallet/images/wallet-icon_48.png 48w, https://developers.google.com/static/wallet/images/wallet-icon_72.png 72w, https://developers.google.com/static/wallet/images/wallet-icon_96.png 96w, https://developers.google.com/static/wallet/images/wallet-icon_480.png 480w, https://developers.google.com/static/wallet/images/wallet-icon_720.png 720w, https://developers.google.com/static/wallet/images/wallet-icon_856.png 856w, https://developers.google.com/static/wallet/images/wallet-icon_960.png 960w, https://developers.google.com/static/wallet/images/wallet-icon_1440.png 1440w, https://developers.google.com/static/wallet/images/wallet-icon_1920.png 1920w, https://developers.google.com/static/wallet/images/wallet-icon_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/wallet"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Wallet"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Wallet
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Documentation"
+      
+        track-name="documentation"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Documentation
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Documentation"
+      
+        track-name="documentation"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Documentation">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Documentation">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://developers.googleblog.com/search/?query=wallet"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="wallet"
+      
+        data-label="https://developers.googleblog.com/search/?query=wallet"
+      
+        track-name="blog"
+      
+        data-action="upper-tab-click"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/wallet/events"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="wallet"
+      
+        data-label="/wallet/events"
+      
+        track-name="events"
+      
+        data-action="upper-tab-click"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Events"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Events
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/wallet/partners"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: For Business"
+      
+        track-name="for business"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For Business"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      For Business
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Community"
+      
+        track-name="community"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Community
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Community"
+      
+        track-name="community"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Community">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Community">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="Documentation"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Access
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access/digital-car-key/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Digital Car Keys"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Digital Car Keys
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access/campus-id/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Campus IDs"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Campus IDs
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access/corporate-badge/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Corporate Badges"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Corporate Badges
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access/hotel-key/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Hotel Keys"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Hotel Keys
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/access/multi-family-key/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Multi-family Keys"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Multi-family Keys
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Health
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/health"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/generic-private-pass"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Health Insurance Cards"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Health Insurance Cards
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/health/test-records"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Test Records"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Test Records
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/health/vaccine-cards"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: COVID Cards"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      COVID Cards
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/identity/provisioning"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Provisioning Digital Credentials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Provisioning Digital Credentials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/identity/verify/accepting-ids-from-wallet-online"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Verify with Google Wallet"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Verify with Google Wallet
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Retail
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/retail"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/retail/gift-cards"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gift Cards"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gift Cards
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/retail/loyalty-cards"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Loyalty Cards"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Loyalty Cards
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/retail/offers"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Offers"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Offers
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/pay/issuers"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: In-store payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      In-store payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Tickets and transit
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets/boarding-passes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Boarding Passes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Boarding Passes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets/events"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Event Tickets"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Event Tickets
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets/closed-loop/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Closed Loop Transit Passes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Closed Loop Transit Passes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets/open-loop/get-started/overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Open Loop Transit Passes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Open Loop Transit Passes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/tickets/transit-passes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Transit Passes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Transit Passes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Generic
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/generic-overview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/generic"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Generic pass"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Generic pass
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/generic-private-pass"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Generic private pass"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Generic private pass
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Other Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/smart-tap"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Smart Tap"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Smart Tap
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/wallet/docs/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release Notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release Notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Community"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://stackoverflow.com/questions/tagged/google-wallet"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: StackOverflow"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      StackOverflow
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://github.com/google-wallet"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: GitHub"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      GitHub
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://www.youtube.com/@GooglePay"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: YouTube"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      YouTube
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://twitter.com/googlepaydevs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: X (Twitter)"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      X (Twitter)
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://goo.gle/payments-dev-community"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Discord"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Discord
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              
+              
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  disabled></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /wallet/wallet.css */
+/* ========================================================================== */
+/* Custom property definitions - defaults. */
+/* ========================================================================== */
+.wallet-hero--access {
+  --wallet-hero-background: center / 1600px no-repeat url(/wallet/images/hero/access.jpg);
+}
+
+.wallet-hero--identity {
+  --wallet-hero-background: center / 1600px no-repeat url(/wallet/images/hero/identity.jpg);
+}
+
+.wallet-hero--home {
+  --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/home.jpg);
+  --wallet-hero-copy-margin-block: 226px 0;
+  --wallet-hero-copy-margin-inline: 0;
+  --wallet-hero-copy-max-width: 900px;
+  --wallet-hero-copy-width: 70vw;
+  --wallet-hero-min-height: 1008px;
+}
+
+.wallet-hero--offerings {
+  --wallet-hero-copy-margin-block: 300px 0;
+  --wallet-hero-copy-margin-inline: 0 auto;
+  --wallet-hero-copy-max-width: 880px;
+  --wallet-hero-copy-width: 52vw;
+  --wallet-hero-min-height: 1000px;
+}
+
+.wallet-hero--retail {
+  --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/retail.jpg);
+  --wallet-hero-copy-margin-block: 140px 0;
+  --wallet-hero-copy-margin-inline: auto;
+  --wallet-hero-copy-max-width: 825px;
+  --wallet-hero-copy-width: 52vw;
+  --wallet-hero-min-height: 1290px;
+}
+
+.wallet-hero--tickets {
+  --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/tickets.jpg);
+  --wallet-hero-copy-margin-block: 72px 0;
+  --wallet-hero-copy-margin-inline: auto;
+  --wallet-hero-copy-max-width: 60%;
+  --wallet-hero-min-height: 1300px;
+}
+
+.wallet-hero--health {
+  --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/health.png);
+  --wallet-hero-copy-margin-block: 300px 0;
+  --wallet-hero-copy-margin-inline: 0 auto;
+  --wallet-hero-copy-max-width: 660px;
+  --wallet-hero-copy-width: 42vw;
+  --wallet-hero-min-height: 1200px;
+}
+
+.wallet-hero--generic {
+  --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/generic.png);
+  --wallet-hero-copy-margin-block: 72px 0;
+  --wallet-hero-copy-margin-inline: auto;
+  --wallet-hero-copy-max-width: 500px;
+  --wallet-hero-min-height: 1300px;
+}
+
+.wallet-identity {
+  --wallet-identity-font: 18px / 24px Google Sans;
+}
+
+/* ========================================================================== */
+/* Custom property definitions - xlarge screens. */
+/* ========================================================================== */
+@media screen and (max-width: 1600px) {
+  .wallet-hero,
+  .wallet-section-margin,
+  .wallet-identity,
+  .wallet-verticals {
+    --wallet-heading-font: 700 44px / 52px Google Sans;
+  }
+
+  .wallet-cards {
+    --wallet-cards-margin-block: 120px;
+  }
+
+  .wallet-description {
+    --wallet-description-font: 16px / 24px Google Sans;
+  }
+
+  .wallet-hero--access {
+    --wallet-hero-background: center / 100vw no-repeat url(/wallet/images/hero/access.jpg);
+  }
+
+  .wallet-hero--identity {
+    --wallet-hero-background: center / 100vw no-repeat url(/wallet/images/hero/identity.jpg);
+  }
+
+  .wallet-hero--home {
+    --wallet-hero-copy-margin-block: 16vw 0;
+  }
+
+  .wallet-hero--offerings {
+    --wallet-hero-copy-margin-block: 16vw 0;
+    --wallet-hero-min-height: 68vw;
+  }
+
+  .wallet-hero--health {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/health.png);
+    --wallet-hero-copy-margin-block: 16vw 0;
+    --wallet-hero-min-height: 75vw;
+  }
+
+  .wallet-hero--retail {
+    --wallet-hero-copy-margin-block: 8vw 0;
+    --wallet-hero-height: 75vw;
+  }
+
+  .wallet-hero--tickets {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/tickets.jpg);
+    --wallet-hero-copy-margin-block: 36px 0;
+    --wallet-hero-copy-max-width: 80%;
+    --wallet-hero-min-height: 80vw;
+  }
+
+  .wallet-hero--generic {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/generic.png);
+    --wallet-hero-copy-margin-block: 36px 0;
+    --wallet-hero-min-height: 80vw;
+  }
+
+  .wallet-section-margin {
+    --wallet-section-margin-block: 120px 0;
+  }
+
+  .wallet-verticals {
+    --wallet-verticals-padding: 4vw;
+  }
+
+  .wallet-identity {
+    --wallet-identity-padding: 4vw;
+    --wallet-item-image-min-width: 65%;
+  }
+}
+
+/* ========================================================================== */
+/* Custom property definitions - tablet. */
+/* ========================================================================== */
+@media screen and (max-width: 840px) {
+  .wallet-hero,
+  .wallet-section-margin,
+  .wallet-identity,
+  .wallet-verticals {
+    --wallet-heading-font: 700 32px / 40px Google Sans;
+  }
+
+  .wallet-cards {
+    --wallet-cards-margin-block: 80px;
+  }
+
+  .wallet-hero--access {
+    --wallet-hero-background: center / 100vw no-repeat url(/wallet/images/hero/access-s.jpg);
+  }
+  
+  .wallet-hero--identity {
+    --wallet-hero-background: center / 100vw no-repeat url(/wallet/images/hero/identity.jpg);
+  }
+
+  .wallet-hero--home {
+    --wallet-hero-background: top / 1600px no-repeat url(/wallet/images/hero/home-s.jpg);
+  }
+
+  .wallet-hero--retail {
+    --wallet-hero-background: top / 1200px no-repeat url(/wallet/images/hero/retail-s.jpg);
+    --wallet-hero-copy-width: 100%;
+    --wallet-hero-min-height: 968px;
+  }
+
+  .wallet-hero--tickets {
+    --wallet-hero-background: top / 1200px no-repeat url(/wallet/images/hero/tickets-s.jpg);
+    --wallet-hero-min-height: 968px;
+   }
+
+  .wallet-hero--health {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/health-s.png);
+    --wallet-hero-copy-margin-block: 8vw 0;
+    --wallet-hero-copy-margin-inline: auto;
+    --wallet-hero-copy-max-width: 400px;
+    --wallet-hero-copy-width: 100%;
+    --wallet-hero-min-height: 84vw;
+  }
+
+  .wallet-hero--health .devsite-landing-row-inner {
+    max-width: 56vw;
+    margin-left: 0;
+  }
+
+  .wallet-hero--generic {
+    --wallet-hero-background: top / 1100px no-repeat url(/wallet/images/hero/generic.png);
+    --wallet-hero-copy-max-width: 400px;
+    --wallet-hero-min-height: 920px;
+  }
+
+  .wallet-section-margin {
+    --wallet-section-margin-block: 80px 0;
+  }
+
+  .wallet-verticals {
+    --wallet-button-margin: 16px 4px;
+    --wallet-verticals-font: 18px / 24px Google Sans;
+  }
+
+  .wallet-identity {
+    --wallet-button-margin: 16px 4px;
+    --wallet-identity-font: 18px / 24px Google Sans;
+    --wallet-item-image-min-width: 65%;
+  }
+}
+
+/* ========================================================================== */
+/* Custom property definitions - mobile. */
+/* ========================================================================== */
+@media screen and (max-width: 600px) {
+  .wallet-hero,
+  .wallet-section-margin,
+  .wallet-identity,
+  .wallet-verticals {
+    --wallet-heading-font: 700 28px / 36px Google Sans;
+  }
+
+  .wallet-cards {
+    --wallet-cards-margin-block: 60px;
+  }
+
+  .wallet-hero--access {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/access-s.jpg);
+  }
+
+  .wallet-hero--identity {
+    --wallet-hero-background: top / 100vw no-repeat url(/wallet/images/hero/identity.jpg);
+  }
+
+  .wallet-hero--home {
+    --wallet-home-hero-copy-width: 64vw;
+  }
+
+  .wallet-hero--retail {
+    --wallet-hero-background: top / 1000px no-repeat url(/wallet/images/hero/retail-s.jpg);
+    --wallet-hero-min-height: 808px;
+  }
+
+  .wallet-hero--home,
+  .wallet-hero--retail,
+  .wallet-hero--offerings {
+    --wallet-hero-margin-block: 0 16px;
+  }
+
+  .wallet-hero--tickets {
+    --wallet-hero-background: top / 1000px no-repeat url(/wallet/images/hero/tickets-s.jpg);
+    --wallet-hero-copy-max-width: 100%;
+    --wallet-hero-min-height: 808px;
+  }
+
+  .wallet-hero--generic {
+    --wallet-hero-background: top / 900px no-repeat url(/wallet/images/hero/generic.png);
+    --wallet-hero-copy-max-width: 320px;
+    --wallet-hero-min-height: 760px;
+  }
+
+  .wallet-section-margin {
+    --wallet-section-margin-block: 60px 0;
+  }
+}
+
+/* ========================================================================== */
+/* Rules with static properties and custom property references. */
+/* ========================================================================== */
+
+.wallet-font-family * {
+  font-family: Google Sans !important;
+}
+
+.wallet-hero {
+  background: var(--wallet-hero-background);
+  height: var(--wallet-hero-height);
+  margin-block: var(--wallet-hero-margin-block);
+  margin-inline: auto;
+  min-height: var(--wallet-hero-min-height, 1000px);
+  padding-inline: 4vw;
+  width: 100%
+}
+
+/* Need to target devsite because it's targeting only the copy inside the layout
+ * and allows us to properly space the text on the background image */
+.wallet-hero .devsite-landing-row-group {
+  margin-block: var(--wallet-hero-copy-margin-block);
+  margin-inline: var(--wallet-hero-copy-margin-inline);
+  max-width: var(--wallet-hero-copy-max-width);
+  width: var(--wallet-hero-copy-width);
+}
+
+/* Modify grid to show only one card. */
+.wallet-identity .devsite-landing-row-group {
+  display: block;
+  grid-auto-rows: 1fr !important;
+}
+
+/* Remove the divider. */
+.wallet-identity .devsite-landing-row-item-no-description {
+  display: none;
+}
+
+.wallet-hero h3,
+.wallet-section-margin h2,
+.wallet-identity  h3 {
+  font: var(--wallet-heading-font, 700 43px / 64px Google Sans);
+  margin-block: 0 24px;
+},
+.wallet-verticals h3 {
+  font: var(--wallet-heading-font, 700 56px / 64px Google Sans);
+  margin-block: 0 24px;
+}
+
+.wallet-description {
+  font: var(--wallet-description-font, 18px / 24px Google Sans);
+}
+
+.wallet-hero .button,
+.wallet-verticals .button {
+  margin-block: var(--wallet-button-margin, 24px 4px);
+}
+
+.wallet-identity .button {
+  margin-block: var(--wallet-button-margin, 24px 4px);
+}
+
+.wallet-home-featured h3 {
+  font-weight: 700;
+}
+
+.wallet-section-margin {
+  margin-block: var(--wallet-section-margin-block, 140px 0);
+  padding-inline: 4vw;
+}
+
+.wallet-verticals {
+  margin-block: auto 20px;
+  margin-inline: auto;
+}
+
+.wallet-identity {
+  margin-block: auto 20px;
+  margin-inline: auto;
+}
+
+.wallet-cards {
+  margin-block: var(--wallet-cards-margin-block, 140px);
+}
+
+/* Need to target devsite because it's targeting only the copy inside the layout
+ * [1] Important tag because we need to override the default padding */
+.wallet-verticals .devsite-landing-row-item-description {
+  font: var(--wallet-verticals-font, 22px / 28px Google Sans);
+  padding-inline: var(--wallet-verticals-padding, 80px) !important; /* [1] */
+}
+
+.wallet-identity .devsite-landing-row-item-description {
+  font: var(--wallet-identity-font, 22px / 28px Google Sans);
+  padding-inline: var(--wallet-identity-padding, 80px) !important; /* [1] */
+}
+
+.wallet-identity-usecase .devsite-landing-row-item-description {
+  font: var(--wallet-identity-font, 22px / 28px Google Sans);
+  padding-inline: var(--wallet-identity-padding, 80px) !important; /* [1] */
+}
+
+/* Need to target devsite because we are applying a gradient behind the image */
+.wallet-verticals .devsite-landing-row-item-media {
+  background: linear-gradient(180deg, #e8f0fe 0%, #fde7f3 100%);
+}
+
+/* Need to target devsite because we are applying a gradient behind the image */
+.wallet-verticals .devsite-landing-row-item-media-left {
+  background: linear-gradient(180deg, #e6f4ea 0%, #fef7e0 100%);
+}
+
+.wallet-identity .devsite-landing-row-item-image {
+  width: 65%;
+  margin-left: 80px;
+}
+
+.wallet-identity .devsite-landing-row-inner {
+  margin-top: 72px;
+}
+
+.wallet-identity-usecase .devsite-landing-row-inner {
+  margin-bottom: 72px;
+}
+
+/* Need to target devsite because we are applying a gradient behind the image */
+.wallet-identity-usecase .devsite-landing-row-item-media {
+  background: linear-gradient(180deg, #7dc1ff54 0%, #ffc26657 100%);
+}
+
+/* Need to target devsite because we are applying a gradient behind the image */
+.wallet-identity-usecase .devsite-landing-row-item-media-left {
+  background: linear-gradient(180deg, #edff7d80 0%, #70ff985e 100%);
+}
+
+.wallet-identity-sub-head {
+  color: #4285f4;
+}
+
+.wallet-identity-coming-soon {
+  font-size: 16px;
+}
+
+      </style>
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/wallet"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Google Wallet"
+      
+    >
+    
+          Google Wallet
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Google Wallet"
+  product-id="85209"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20260310-r00-rc00.476021692791623284"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/wallet/images/wallet-icon.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  <devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip></devsite-actions>
+  
+    
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    disabled>
+  </devsite-toc>
+  <div class="devsite-article-body clearfix
+  devsite-no-page-title">
+
+  
+    
+  <section class="devsite-landing-row devsite-landing-row-1-up wallet-font-family wallet-hero wallet-hero--home"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="give-users-fast-secure-access-to-everyday-essentials"
+        data-text="Give users fast, secure access to everyday essentials"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Give users fast, secure access to everyday essentials
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <span classname="wallet-description">With Google Wallet, your customers can tap to pay everywhere Google Pay is accepted, shop with loyalty cards, board a flight, and more, all with just their Android phone.</span>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="#get-started"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="hero-get-started-click"
+      
+        data-label="/wallet#get-started"
+      
+        data-category="wallet"
+      
+    
+    >Get started</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards wallet-font-family wallet-home-featured wallet-section-margin"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/events-hero-image.png"
+         srcset="https://developers.google.com/static/wallet/images/home/events-hero-image_36.png 36w,https://developers.google.com/static/wallet/images/home/events-hero-image_48.png 48w,https://developers.google.com/static/wallet/images/home/events-hero-image_72.png 72w,https://developers.google.com/static/wallet/images/home/events-hero-image_96.png 96w,https://developers.google.com/static/wallet/images/home/events-hero-image_480.png 480w,https://developers.google.com/static/wallet/images/home/events-hero-image_720.png 720w,https://developers.google.com/static/wallet/images/home/events-hero-image_856.png 856w,https://developers.google.com/static/wallet/images/home/events-hero-image_960.png 960w,https://developers.google.com/static/wallet/images/home/events-hero-image_1440.png 1440w,https://developers.google.com/static/wallet/images/home/events-hero-image_1920.png 1920w,https://developers.google.com/static/wallet/images/home/events-hero-image_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google-wallet-events"
+        data-text="Google Wallet Events"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Google Wallet Events
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            In-person events? Livestreams? We got you covered. Check out our upcoming and latest developer events for Google Wallet.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/events"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-label="/wallet/events"
+      
+        data-category="wallet"
+      
+        data-action="vertical-learn-more-click"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-video
+  autohide="1"
+  showinfo="0"
+  video-id="p0Xug7cg36Q"
+  
+></devsite-video>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="everything-you-need-to-know-about-google-pay-wallet"
+        data-text="Everything you need to know about Google Pay & Wallet"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Everything you need to know about Google Pay & Wallet
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <span>Learn about new partnerships that aim to reduce fraud and expand payment options, as well as developer features that make checkout conversions and testing more efficient. Plus, discover how Google Wallet is expanding its capabilities in the world of payments and digital valuables.</span>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-header-centered wallet-font-family wallet-section-margin"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="span-idget-starteduse-casesspan"
+        data-text="Use cases"
+        
+        tabindex="0">
+      
+    
+        <span id="get-started">Use cases</span>
+      
+  
+    </h2>
+  
+
+          
+            <div class="devsite-landing-row-description">
+              <span classname="wallet-description">We've customized our developer guides to fit your specific needs. Choose your use case to get started.</span>
+
+            </div>
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee devsite-landing-row-50 devsite-landing-row-cards wallet-verticals"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/retail.png"
+         srcset="https://developers.google.com/static/wallet/images/home/retail_36.png 36w,https://developers.google.com/static/wallet/images/home/retail_48.png 48w,https://developers.google.com/static/wallet/images/home/retail_72.png 72w,https://developers.google.com/static/wallet/images/home/retail_96.png 96w,https://developers.google.com/static/wallet/images/home/retail_480.png 480w,https://developers.google.com/static/wallet/images/home/retail_720.png 720w,https://developers.google.com/static/wallet/images/home/retail_856.png 856w,https://developers.google.com/static/wallet/images/home/retail_960.png 960w,https://developers.google.com/static/wallet/images/home/retail_1440.png 1440w,https://developers.google.com/static/wallet/images/home/retail_1920.png 1920w,https://developers.google.com/static/wallet/images/home/retail_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="retail"
+        data-text="Retail"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Retail
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Make it easy for your customers to add loyalty cards, offers, gift cards, or make in-store payments using their mobile device. Integrate with Google Wallet and engage with users through location-based notifications, real-time updates, and more.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/retail"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="vertical-learn-more-click"
+      
+        data-label="/wallet/retail"
+      
+        data-category="wallet"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee devsite-landing-row-50 devsite-landing-row-cards wallet-verticals"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            
+    devsite-landing-row-item-media-left
+  ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/tickets.png"
+         srcset="https://developers.google.com/static/wallet/images/home/tickets_36.png 36w,https://developers.google.com/static/wallet/images/home/tickets_48.png 48w,https://developers.google.com/static/wallet/images/home/tickets_72.png 72w,https://developers.google.com/static/wallet/images/home/tickets_96.png 96w,https://developers.google.com/static/wallet/images/home/tickets_480.png 480w,https://developers.google.com/static/wallet/images/home/tickets_720.png 720w,https://developers.google.com/static/wallet/images/home/tickets_856.png 856w,https://developers.google.com/static/wallet/images/home/tickets_960.png 960w,https://developers.google.com/static/wallet/images/home/tickets_1440.png 1440w,https://developers.google.com/static/wallet/images/home/tickets_1920.png 1920w,https://developers.google.com/static/wallet/images/home/tickets_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="tickets"
+        data-text="Tickets"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Tickets
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Your users can add tickets and passes for movies, flights, and more, right in Google Wallet.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/tickets"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-label="/wallet/tickets"
+      
+        data-category="wallet"
+      
+        data-action="vertical-learn-more-click"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee devsite-landing-row-50 devsite-landing-row-cards wallet-verticals"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/access.png"
+         srcset="https://developers.google.com/static/wallet/images/home/access_36.png 36w,https://developers.google.com/static/wallet/images/home/access_48.png 48w,https://developers.google.com/static/wallet/images/home/access_72.png 72w,https://developers.google.com/static/wallet/images/home/access_96.png 96w,https://developers.google.com/static/wallet/images/home/access_480.png 480w,https://developers.google.com/static/wallet/images/home/access_720.png 720w,https://developers.google.com/static/wallet/images/home/access_856.png 856w,https://developers.google.com/static/wallet/images/home/access_960.png 960w,https://developers.google.com/static/wallet/images/home/access_1440.png 1440w,https://developers.google.com/static/wallet/images/home/access_1920.png 1920w,https://developers.google.com/static/wallet/images/home/access_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="access"
+        data-text="Access"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Access
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Google Wallet is simple, secure, and convenient. From digital car keys to campus ID cards, your users can add them all in their Google Wallet.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/access"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-label="/wallet/access"
+      
+        data-category="wallet"
+      
+        data-action="vertical-learn-more-click"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee devsite-landing-row-50 devsite-landing-row-cards wallet-verticals"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            
+    devsite-landing-row-item-media-left
+  ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/health.png"
+         srcset="https://developers.google.com/static/wallet/images/home/health_36.png 36w,https://developers.google.com/static/wallet/images/home/health_48.png 48w,https://developers.google.com/static/wallet/images/home/health_72.png 72w,https://developers.google.com/static/wallet/images/home/health_96.png 96w,https://developers.google.com/static/wallet/images/home/health_480.png 480w,https://developers.google.com/static/wallet/images/home/health_720.png 720w,https://developers.google.com/static/wallet/images/home/health_856.png 856w,https://developers.google.com/static/wallet/images/home/health_960.png 960w,https://developers.google.com/static/wallet/images/home/health_1440.png 1440w,https://developers.google.com/static/wallet/images/home/health_1920.png 1920w,https://developers.google.com/static/wallet/images/home/health_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="health"
+        data-text="Health"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Health
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Offer your patients fast and secure access to their protected health with Google Wallet. From vaccine cards to test records, users can add everything to their device and add them to their Android Home screen.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/health"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="vertical-learn-more-click"
+      
+        data-label="/wallet/health"
+      
+        data-category="wallet"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee devsite-landing-row-50 devsite-landing-row-cards wallet-verticals"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://developers.google.com/static/wallet/images/home/generic.png"
+         srcset="https://developers.google.com/static/wallet/images/home/generic_36.png 36w,https://developers.google.com/static/wallet/images/home/generic_48.png 48w,https://developers.google.com/static/wallet/images/home/generic_72.png 72w,https://developers.google.com/static/wallet/images/home/generic_96.png 96w,https://developers.google.com/static/wallet/images/home/generic_480.png 480w,https://developers.google.com/static/wallet/images/home/generic_720.png 720w,https://developers.google.com/static/wallet/images/home/generic_856.png 856w,https://developers.google.com/static/wallet/images/home/generic_960.png 960w,https://developers.google.com/static/wallet/images/home/generic_1440.png 1440w,https://developers.google.com/static/wallet/images/home/generic_1920.png 1920w,https://developers.google.com/static/wallet/images/home/generic_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px"
+         
+         loading="lazy"
+         >
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="and-more"
+        data-text="And more…"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        And more…
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Use the Generic pass when your use case does not fit into any of our other pre-defined types. From gym memberships to library cards, insurance cards to parking passes, you can customize generic passes to meet your customers' needs.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/generic"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="vertical-learn-more-click"
+      
+        data-label="/wallet/generic"
+      
+        data-category="wallet"
+      
+    
+    >Learn more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards devsite-landing-row-header-centered wallet-font-family wallet-section-margin"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="featured-resources"
+        data-text="Featured resources"
+        
+        tabindex="0">
+      
+    
+        Featured resources
+      
+  
+    </h2>
+  
+
+          
+            <div class="devsite-landing-row-description">
+              <span classname="wallet-description">Find the latest developer tools and samples to help you build wallet objects.</span>
+
+            </div>
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="top"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://developers.google.com/static/wallet/images/home/passes-visual.png"
+           srcset="https://developers.google.com/static/wallet/images/home/passes-visual_36.png 36w,https://developers.google.com/static/wallet/images/home/passes-visual_48.png 48w,https://developers.google.com/static/wallet/images/home/passes-visual_72.png 72w,https://developers.google.com/static/wallet/images/home/passes-visual_96.png 96w,https://developers.google.com/static/wallet/images/home/passes-visual_480.png 480w,https://developers.google.com/static/wallet/images/home/passes-visual_720.png 720w,https://developers.google.com/static/wallet/images/home/passes-visual_856.png 856w,https://developers.google.com/static/wallet/images/home/passes-visual_960.png 960w,https://developers.google.com/static/wallet/images/home/passes-visual_1440.png 1440w,https://developers.google.com/static/wallet/images/home/passes-visual_1920.png 1920w,https://developers.google.com/static/wallet/images/home/passes-visual_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="passes-visual-demo"
+        data-text="Passes visual demo"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Passes visual demo
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Make quick adjustments to the design of your loyalty card in Google Wallet, and get the code snippet in your preferred language.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/retail/loyalty-cards/resources/pass-builder"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="promo-banner-click"
+      
+        data-label="/wallet/retail/loyalty-cards/resources/pass-builder"
+      
+        data-category="wallet"
+      
+    
+    >Explore</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="top"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://developers.google.com/static/wallet/images/home/code-samples.png"
+           srcset="https://developers.google.com/static/wallet/images/home/code-samples_36.png 36w,https://developers.google.com/static/wallet/images/home/code-samples_48.png 48w,https://developers.google.com/static/wallet/images/home/code-samples_72.png 72w,https://developers.google.com/static/wallet/images/home/code-samples_96.png 96w,https://developers.google.com/static/wallet/images/home/code-samples_480.png 480w,https://developers.google.com/static/wallet/images/home/code-samples_720.png 720w,https://developers.google.com/static/wallet/images/home/code-samples_856.png 856w,https://developers.google.com/static/wallet/images/home/code-samples_960.png 960w,https://developers.google.com/static/wallet/images/home/code-samples_1440.png 1440w,https://developers.google.com/static/wallet/images/home/code-samples_1920.png 1920w,https://developers.google.com/static/wallet/images/home/code-samples_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="code-samples"
+        data-text="Code samples"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Code samples
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Browse and clone sample integrations for each vertical and programming language (Java, C#, Python, PHP, JavaScript)
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://github.com/google-wallet/rest-samples"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="promo-banner-click"
+      
+        data-label="github.com/google-wallet/rest-samples"
+      
+        data-category="wallet"
+      
+    
+    >Explore</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="top"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://developers.google.com/static/wallet/images/home/codelabs.png"
+           srcset="https://developers.google.com/static/wallet/images/home/codelabs_36.png 36w,https://developers.google.com/static/wallet/images/home/codelabs_48.png 48w,https://developers.google.com/static/wallet/images/home/codelabs_72.png 72w,https://developers.google.com/static/wallet/images/home/codelabs_96.png 96w,https://developers.google.com/static/wallet/images/home/codelabs_480.png 480w,https://developers.google.com/static/wallet/images/home/codelabs_720.png 720w,https://developers.google.com/static/wallet/images/home/codelabs_856.png 856w,https://developers.google.com/static/wallet/images/home/codelabs_960.png 960w,https://developers.google.com/static/wallet/images/home/codelabs_1440.png 1440w,https://developers.google.com/static/wallet/images/home/codelabs_1920.png 1920w,https://developers.google.com/static/wallet/images/home/codelabs_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="codelabs"
+        data-text="Codelabs"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Codelabs
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Explore self-guided codelabs and gain firsthand experience with Google Wallet APIs.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/wallet/generic/resources/codelabs"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="/wallet/generic/resources/codelabs"
+      
+        data-category="wallet"
+      
+        data-action="promo-banner-click"
+      
+    
+    >Explore</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards devsite-landing-row-header-centered wallet-font-family wallet-section-margin"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="product-news"
+        data-text="Product news"
+        
+        tabindex="0">
+      
+    
+        Product news
+      
+  
+    </h2>
+  
+
+          
+            <div class="devsite-landing-row-description">
+              <span classname="wallet-description">Stay in the know with news from Google Wallet developers.</span>
+
+            </div>
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="increase-cross-platform-adoption-with-the-pass-converter"
+        data-text="Increase cross-platform adoption with the Pass Converter"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Increase cross-platform adoption with the Pass Converter
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            The Pass Converter lets you take existing passes for one wallet application, convert them, and make them available in your mobile or web application for another wallet platform.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.googleblog.com/en/open-source-pass-converter-for-mobile-wallets"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="news-click"
+      
+        data-label="https://developers.googleblog.com/en/open-source-pass-converter-for-mobile-wallets"
+      
+        data-category="wallet"
+      
+    
+    >Read more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="try-the-new-google-wallet-api-code-samples"
+        data-text="Try the new Google Wallet API code samples
+"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Try the new Google Wallet API code samples
+
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            The Google Wallet API code samples repository shows how to create classes, objects, Add to Google Wallet links, and manage issuer accounts. Each supported language includes detailed documentation comments compatible with most popular IDEs.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://github.com/google-wallet/rest-samples"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="github.com/google-wallet/rest-samples"
+      
+        data-category="wallet"
+      
+        data-action="news-click"
+      
+    
+    >Read more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="simpler-google-wallet-integration-for-android-developers"
+        data-text="Simpler Google Wallet integration for Android developers
+"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Simpler Google Wallet integration for Android developers
+
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Learn about the benefits of using the new Google Wallet Android SDK to digitize wallet objects on Android, and explore developer resources to help you integrate.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://goo.gle/wallet-integration"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="goo.gle/wallet-integration"
+      
+        data-category="wallet"
+      
+        data-action="news-click"
+      
+    
+    >Read more</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-cta wallet-font-family wallet-section-margin"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google-pay-and-wallet-console"
+        data-text="Google Pay and Wallet Console"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://pay.google.com/business/console">
+    
+        Google Pay and Wallet Console
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Enable fast, simple checkout, passes, and more within your Android app or website.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://pay.google.com/business/console"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-label="pay.google.com/business/console"
+      
+        data-category="wallet"
+      
+        data-action="cta-click"
+      
+    
+    >Get started</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  
+
+  
+    <devsite-hats-survey class="nocontent"
+      hats-id="9Q8rXGwp80txz2edqks0U5nfewzu"
+      listnr-id="5165057"></devsite-hats-survey>
+  
+</div>
+
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Google Wallet"
+  product-id="85209"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20260310-r00-rc00.476021692791623284"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/wallet/images/wallet-icon.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://goo.gle/3FReQXN"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Programs</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Developer consoles</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google API Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.cloud.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Cloud Platform Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//play.google.com/apps/publish"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Play Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.firebase.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Firebase Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.actions.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Actions on Google Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//cast.google.com/publish"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Cast SDK Developer Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//chrome.google.com/webstore/developer/dashboard"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Chrome Web Store Dashboard
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//console.home.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            Google Home Developer Console
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+          <devsite-concierge
+  
+  
+    data-info-panel
+  
+  
+    data-ai-panel
+  
+  
+  
+  
+    data-api-explorer-panel
+  >
+</devsite-concierge>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension6&#34;: &#34;en&#34;, &#34;dimension11&#34;: false, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension4&#34;: &#34;Google Wallet&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}, {&#34;dimensions&#34;: {&#34;dimension6&#34;: &#34;en&#34;, &#34;dimension11&#34;: false, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension4&#34;: &#34;Google Wallet&#34;}, &#34;gaid&#34;: &#34;UA-22847105-24&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 0}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;G-H8SZV3J6N1&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Google Wallet&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="2na9QHaCKifNjD0IueRv0tBDAo4P1+">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers","https://developers-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Concierge__enable_pushui","DevPro__enable_free_benefits","MiscFeatureFlags__emergency_css","Profiles__enable_completequiz_endpoint","Profiles__enable_recognition_badges","MiscFeatureFlags__enable_appearance_cookies","Concierge__enable_devsite_llm_tools","DevPro__enable_cloud_innovators_plus","DevPro__enable_embed_profile_creation","Cloud__enable_legacy_calculator_redirect","Profiles__enable_developer_profile_pages_as_content","DevPro__enable_developer_subscriptions","Analytics__enable_devpro_interaction_logging","Profiles__enable_developer_profiles_callout","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_auto_apply_credits","DevPro__enable_enterprise","CloudShell__cloud_code_overflow_menu","Concierge__enable_concierge_restricted","Profiles__enable_join_program_group_endpoint","Profiles__enable_completecodelab_endpoint","MiscFeatureFlags__enable_view_transitions","Profiles__enable_release_notes_notifications","MiscFeatureFlags__developers_footer_dark_image","Concierge__enable_remove_info_panel_tags","Profiles__enable_complete_playlist_endpoint","Cloud__enable_cloudx_experiment_ids","Cloud__enable_cloud_dlp_service","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_user_type","DevPro__enable_google_payments","Experiments__reqs_query_experiments","Analytics__enable_clearcut_logging","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_firebase_utm","Profiles__require_profile_eligibility_for_signin","Search__enable_dynamic_content_confidential_banner","Cloud__enable_cloud_shell","Cloud__enable_free_trial_server_call","DevPro__enable_devpro_offers","Profiles__enable_developer_profile_benefits_ui_redesign","SignIn__enable_l1_signup_flow","Profiles__enable_callout_notifications","Significatio__enable_by_tenant","Cloud__cache_serialized_dynamic_content","MiscFeatureFlags__enable_explicit_template_dependencies","MiscFeatureFlags__enable_explain_this_code","BookNav__enable_tenant_cache_key","Search__enable_page_map","DevPro__enable_g1_integration","DevPro__enable_firebase_workspaces_card","TpcFeatures__proxy_prod_host","Search__enable_ai_search_summaries_for_all","Concierge__enable_key_takeaways","MiscFeatureFlags__enable_framebox_badge_methods","MiscFeatureFlags__remove_cross_domain_tracking_params","DevPro__enable_google_one_card","Concierge__enable_actions_menu","DevPro__remove_eu_tax_intake_form","Search__enable_ai_eligibility_checks","Concierge__enable_concierge","Concierge__enable_tutorial_this_code","MiscFeatureFlags__enable_project_variables","Search__enable_ai_search_summaries_restricted","DevPro__enable_google_payments_buyflow","Cloud__fast_free_trial","Profiles__enable_page_saving","Concierge__enable_key_takeaways_new_ui","Search__enable_ai_search_summaries","Profiles__enable_stripe_subscription_management","CloudShell__cloud_shell_button","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Profiles__enable_playlist_community_acl","Cloud__enable_llm_concierge_chat","Profiles__enable_awarding_url","MiscFeatureFlags__enable_variable_operator","Profiles__enable_purchase_prompts","Profiles__enable_profile_collections","Profiles__enable_targeted_hero","MiscFeatureFlags__developers_footer_image","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_dashboard_curated_recommendations","DevPro__enable_vertex_credit_card","MiscFeatureFlags__fix_lower_breadcrumbs","MiscFeatureFlags__enable_variable_operator_index_yaml","Profiles__enable_public_developer_profiles","DevPro__enable_nvidia_credits_card","DevPro__enable_code_assist"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[13,10],[6,5],[11,8],[16,13],[1,1],[12,9],[14,11],[3,2],[5,4],[4,3],[15,12]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,1,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

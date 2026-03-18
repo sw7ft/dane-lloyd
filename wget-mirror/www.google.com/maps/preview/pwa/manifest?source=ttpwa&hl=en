@@ -1,0 +1,44 @@
+{
+  "name": "Google Maps",
+  "short_name": "Google Maps",
+  "description": "Get where you're going, faster",
+  "start_url": "/maps?force=tt&source=ttpwa",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "scope": "/maps",
+  "theme_color": "#eff5f6",
+  "lang": "en",
+  "android_package_name": "com.google.android.apps.maps",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "https://www.gstatic.com/images/branding/productlogos/maps_2025/v1/web-96dp/logo_maps_2025_color_2x_web_96dp.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "https://www.gstatic.com/images/branding/productlogos/maps_2025_round/v1/web-512dp/logo_maps_2025_round_color_1x_web_512dp.png",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps",
+      "id": "com.google.android.apps.maps"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/google-maps-navigation-transit/id585027354"
+    },
+    {
+      "platform": "chrome_web_store",
+      "url": "https://chrome.google.com/webstore/detail/google-maps/lneaknkopdijkpnocmklfnjbeapigfbh",
+      "id": "lneaknkopdijkpnocmklfnjbeapigfbh"
+    }
+  ],
+  "gcm_sender_id": "1004767959362",
+  "permissions": [
+    "gcm"
+  ]
+}

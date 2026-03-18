@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dane Lloyd — MP for Parkland, Alberta</title>
+    <meta name="description" content="Official website of Dane Lloyd, Member of Parliament for Parkland, Alberta. Serving 114,679 Canadians across 18 communities.">
+    <link rel="icon" href="../images/yootheme/icons/96x96-favicon.png" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navy: { DEFAULT: '#003F72', dark: '#0a2540', light: '#0d5a9e' },
+                    accent: '#1e87f0',
+                    success: '#A9F828'
+                },
+                fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+            }
+        }
+    }
+    </script>
+    <style>
+        .hero-overlay { background: linear-gradient(135deg, rgba(0,63,114,0.85) 0%, rgba(10,37,64,0.7) 100%); }
+        .stat-card { backdrop-filter: blur(12px); background: rgba(255,255,255,0.1); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .nav-blur { backdrop-filter: blur(16px); background: rgba(255,255,255,0.92); }
+        .nav-scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.08); }
+        .community-tag { transition: all 0.2s; }
+        .community-tag:hover { background: #003F72; color: #fff; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="../templates/yootheme/cache/3d/Asset-64x-3d3b7eda.png" alt="Dane Lloyd MP" class="h-10">
+                </a>
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-navy hover:bg-navy/5 transition">Home</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-navy hover:bg-navy/5 transition">About Dane</a>
+                    <a href="community-news.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-navy hover:bg-navy/5 transition">Community News</a>
+                    <a href="stay-informed.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-navy hover:bg-navy/5 transition">Stay Informed</a>
+                    <a href="contact.html" class="ml-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-navy text-white hover:bg-navy-dark transition shadow-sm">Contact Dane</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-3 space-y-1">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-navy bg-navy/5">Home</a>
+                <a href="about.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50">About Dane</a>
+                <a href="community-news.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50">Community News</a>
+                <a href="stay-informed.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50">Stay Informed</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg text-sm font-semibold text-white bg-navy text-center">Contact Dane</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+        <img src="../templates/yootheme/cache/94/photo-1558732599-2f570f74af6e-9419ddae.jpeg" alt="Alberta wheat fields" class="absolute inset-0 w-full h-full object-cover">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-sm font-medium mb-8">
+                    <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+                    Member of Parliament
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
+                    Dane Lloyd
+                </h1>
+                <p class="mt-4 text-xl sm:text-2xl text-blue-100 font-medium">
+                    MP for Parkland, Alberta
+                </p>
+                <p class="mt-6 text-lg text-white/80 max-w-lg leading-relaxed">
+                    Proudly serving 114,679 Canadians across 18 communities in one of Alberta's most vibrant ridings.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-navy font-semibold text-base hover:bg-gray-100 transition shadow-lg shadow-black/10">
+                        Get in Touch
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="about.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-semibold text-base hover:bg-white/20 transition border border-white/20">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Electoral District</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy-dark">Parkland</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+                <div class="text-center p-10 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-gray-100 card-hover">
+                    <div class="text-5xl font-extrabold text-navy mb-2">114,679</div>
+                    <div class="text-gray-500 font-medium uppercase text-sm tracking-wider">Canadians</div>
+                </div>
+                <div class="text-center p-10 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-gray-100 card-hover">
+                    <div class="text-5xl font-extrabold text-navy mb-2">10,108 <span class="text-3xl">km&sup2;</span></div>
+                    <div class="text-gray-500 font-medium uppercase text-sm tracking-wider">Area</div>
+                </div>
+                <div class="text-center p-10 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-gray-100 card-hover">
+                    <div class="text-5xl font-extrabold text-navy mb-2">18</div>
+                    <div class="text-gray-500 font-medium uppercase text-sm tracking-wider">Communities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Connected Cards -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Get Connected</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy-dark">With Dane Lloyd</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+                <a href="stay-informed.html" class="group relative overflow-hidden rounded-2xl card-hover">
+                    <div class="aspect-[3/4]">
+                        <img src="../templates/yootheme/cache/c2/photo-1588591644329-ea4fd16fc6f3-c2e5b228.jpeg" alt="Stay Informed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Stay Informed</h3>
+                        <p class="text-blue-100 text-sm">Newsletter &middot; Social Media</p>
+                    </div>
+                </a>
+                <a href="contact.html" class="group relative overflow-hidden rounded-2xl card-hover">
+                    <div class="aspect-[3/4]">
+                        <img src="../templates/yootheme/cache/33/photo-1586769852044-692d6e3703f0-336a48a3.jpeg" alt="Contact Dane" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Contact Dane</h3>
+                        <p class="text-blue-100 text-sm">Questions &middot; Concerns &middot; Ideas</p>
+                    </div>
+                </a>
+                <a href="stay-informed.html#get-involved" class="group relative overflow-hidden rounded-2xl card-hover">
+                    <div class="aspect-[3/4]">
+                        <img src="../templates/yootheme/cache/28/Lucid_Realism_cinematic_photo_closeup_of_Friendly_volunteers_g_0-280a8abd.jpeg" alt="Get Involved" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Get Involved</h3>
+                        <p class="text-blue-100 text-sm">Volunteer &middot; Careers</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Riding Mosaic -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center fade-in">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="../templates/yootheme/cache/dd/Lucid_Realism_A_group_of_smiling_Albertans_with_diverse_facial_1-dd334a9a.jpeg" alt="Albertans" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="../templates/yootheme/cache/ed/Lucid_Realism_A_small_rural_Alberta_town_main_street_with_a_gr_2-ed4c2b70.jpeg" alt="Small town Alberta" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg" alt="Alberta landscape" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="../templates/yootheme/cache/fe/field-of-rapeseeds-oilseed-rape-blutenmeer-yellow-46164-fee7bd52.jpeg" alt="Alberta fields" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Our Communities</p>
+                    <h2 class="text-4xl font-extrabold text-navy-dark mb-6">18 Communities, One Riding</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-10">
+                        From the bustling twin cities of Spruce Grove and Stony Plain to the rural heartland of Brazeau County and Yellowhead County, Parkland is home to a diverse and resilient community.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Spruce Grove</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Stony Plain</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Parkland County</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Drayton Valley</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Brazeau County</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Mayerthorpe</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Lac Ste. Anne County</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Yellowhead County</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Evansburg</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Enoch</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Entwistle</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Breton</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Cynthia</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Kapasiwin</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Lodgepole</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Seba Beach</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Tomahawk</span>
+                        <span class="community-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 cursor-default">Wildwood</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-24 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 fade-in">Stay informed with updates from MP&nbsp;Dane&nbsp;Lloyd</h2>
+            <p class="text-blue-200 text-lg mb-10 fade-in">Join our email list to receive news, events, and important updates from the riding.</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto fade-in" onsubmit="event.preventDefault(); this.innerHTML='<p class=\'text-white text-lg font-semibold py-4\'>Thank you for subscribing!</p>';">
+                <input type="email" required placeholder="Your email address" class="flex-1 px-5 py-4 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-accent">
+                <button type="submit" class="px-8 py-4 rounded-xl bg-accent text-white font-semibold text-base hover:bg-blue-600 transition whitespace-nowrap">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <img src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-10 mb-6">
+                    <p class="text-blue-200 text-sm leading-relaxed">Proudly serving the people of Parkland, Alberta in the House of Commons.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Navigate</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-blue-200 hover:text-white transition text-sm">Home</a></li>
+                        <li><a href="about.html" class="text-blue-200 hover:text-white transition text-sm">About Dane</a></li>
+                        <li><a href="community-news.html" class="text-blue-200 hover:text-white transition text-sm">Community News</a></li>
+                        <li><a href="stay-informed.html" class="text-blue-200 hover:text-white transition text-sm">Stay Informed</a></li>
+                        <li><a href="contact.html" class="text-blue-200 hover:text-white transition text-sm">Contact Dane</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Office</h4>
+                    <address class="not-italic text-blue-200 text-sm leading-relaxed space-y-2">
+                        <p>#102-4807 44 Avenue<br>Stony Plain, AB T7X 1V5</p>
+                        <p>Phone: (780) 823-2050</p>
+                        <p>Fax: (780) 823-2055</p>
+                        <p><a href="mailto:dane.lloyd@parl.gc.ca" class="hover:text-white transition">dane.lloyd@parl.gc.ca</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Follow</h4>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="https://x.com/danelloydmp" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition" aria-label="X / Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/danelloydcpc/" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@danelloydmp4541" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition" aria-label="YouTube">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-blue-200/60 text-sm">&copy; 2025 Dane Lloyd, MP. All rights reserved.</p>
+                <p class="text-blue-200/40 text-xs">This site is under construction.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-6 right-6 z-50" id="chatWidget">
+        <button id="chatToggle" class="w-14 h-14 rounded-full bg-gradient-to-br from-navy to-navy-dark text-white shadow-lg shadow-navy/30 hover:scale-105 transition-transform flex items-center justify-center" aria-label="Open chat">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </button>
+        <div id="chatPanel" class="hidden absolute bottom-[72px] right-0 w-[340px] max-w-[calc(100vw-48px)] h-[460px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in">
+            <div class="bg-gradient-to-r from-navy to-navy-dark text-white px-5 py-4 flex items-center justify-between">
+                <div>
+                    <div class="font-semibold text-sm">Chat with us</div>
+                    <div class="text-xs text-blue-200">We're here to help</div>
+                </div>
+                <button id="chatClose" class="w-8 h-8 rounded-lg bg-white/15 hover:bg-white/25 flex items-center justify-center transition" aria-label="Close">&times;</button>
+            </div>
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50">
+                <div class="max-w-[85%] p-3 rounded-xl bg-white text-gray-700 text-sm shadow-sm leading-relaxed">
+                    Hi! Welcome to Dane Lloyd's website. How can we help you today?
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <button data-reply="contact" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button>
+                        <button data-reply="about" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button>
+                        <button data-reply="newsletter" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay informed</button>
+                        <button data-reply="events" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Events &amp; news</button>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 py-3 bg-white border-t border-gray-100 flex gap-2">
+                <input id="chatInput" type="text" placeholder="Type a message..." maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy">
+                <button id="chatSend" class="w-10 h-10 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                </button>
+            </div>
+            <div class="text-center py-2 text-[10px] text-gray-400">Demo mode &mdash; replies are preset</div>
+        </div>
+    </div>
+
+    <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        document.getElementById('navbar').classList.toggle('nav-scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Fade-in on scroll
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    // Chat widget
+    (function() {
+        var panel = document.getElementById('chatPanel');
+        var msgs = document.getElementById('chatMessages');
+        var input = document.getElementById('chatInput');
+        var replies = {
+            contact: { q: 'How do I contact Dane?', a: 'You can reach Dane through our <a href="contact.html" class="underline font-medium">Contact page</a>. Visit the office at #102-4807 44 Avenue, Stony Plain, or call (780) 823-2050.' },
+            about: { q: 'Tell me about Dane', a: 'Dane Lloyd is the Member of Parliament for Parkland, Alberta. Learn more on the <a href="about.html" class="underline font-medium">About page</a>.' },
+            newsletter: { q: 'Stay informed', a: 'Sign up for updates on our <a href="stay-informed.html" class="underline font-medium">Stay Informed page</a> for news, events, and important updates from the riding.' },
+            events: { q: 'Events and news', a: 'Check out our <a href="community-news.html" class="underline font-medium">Community News page</a> for the latest from across Parkland.' },
+            fallback: { a: 'Thanks for your message! For specific questions, please use our <a href="contact.html" class="underline font-medium">Contact page</a> or call (780) 823-2050.' }
+        };
+        function addMsg(text, isUser) {
+            var d = document.createElement('div');
+            d.className = 'max-w-[85%] p-3 rounded-xl text-sm leading-relaxed ' + (isUser ? 'bg-navy text-white self-end ml-auto' : 'bg-white text-gray-700 shadow-sm');
+            d[isUser ? 'textContent' : 'innerHTML'] = text;
+            if (!isUser) {
+                var q = document.createElement('div');
+                q.className = 'flex flex-wrap gap-2 mt-3';
+                q.innerHTML = '<button data-reply="contact" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button><button data-reply="about" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button><button data-reply="newsletter" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay informed</button><button data-reply="events" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Events &amp; news</button>';
+                d.appendChild(q);
+            }
+            msgs.appendChild(d);
+            msgs.scrollTop = msgs.scrollHeight;
+        }
+        function handle(key) {
+            var r = replies[key] || replies.fallback;
+            if (r.q) addMsg(r.q, true);
+            setTimeout(function() { addMsg(r.a, false); }, 350);
+        }
+        document.getElementById('chatToggle').onclick = function() { panel.classList.toggle('hidden'); };
+        document.getElementById('chatClose').onclick = function() { panel.classList.add('hidden'); };
+        document.getElementById('chatSend').onclick = function() {
+            var t = (input.value || '').trim(); if (!t) return; input.value = '';
+            addMsg(t, true);
+            var k = 'fallback', l = t.toLowerCase();
+            for (var key in replies) { if (key !== 'fallback' && l.indexOf(key) >= 0) { k = key; break; } }
+            setTimeout(function() { addMsg(replies[k].a, false); }, 350);
+        };
+        input.onkeypress = function(e) { if (e.key === 'Enter') document.getElementById('chatSend').click(); };
+        msgs.addEventListener('click', function(e) { if (e.target.dataset.reply) handle(e.target.dataset.reply); });
+    })();
+    </script>
+</body>
+</html>

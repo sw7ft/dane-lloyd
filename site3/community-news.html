@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community News — Dane Lloyd MP for Parkland, Alberta</title>
+    <meta name="description" content="The latest news, updates, and announcements from Dane Lloyd's office and the communities of Parkland riding.">
+    <link rel="icon" href="../images/yootheme/icons/96x96-favicon.png" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navy:   { DEFAULT: '#003F72', dark: '#0a2540', light: '#0d5a9e', xdark: '#061828' },
+                    accent: { DEFAULT: '#1e87f0', warm: '#f59e0b' },
+                    lime:   '#A9F828',
+                },
+                fontFamily: {
+                    sans:    ['Inter', 'system-ui', 'sans-serif'],
+                    display: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+                },
+                backgroundImage: {
+                    'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E\")",
+                },
+            }
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        .nav-glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.88); border-bottom: 1px solid rgba(0,63,114,0.06); }
+        .nav-solid { background: rgba(10,37,64,0.97); backdrop-filter: blur(20px); }
+        .hero-grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.04; }
+        .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.in { opacity:1; transform:translateY(0); }
+        .d-100 { transition-delay: 0.1s; }
+        .d-200 { transition-delay: 0.2s; }
+        .d-300 { transition-delay: 0.3s; }
+        .d-400 { transition-delay: 0.4s; }
+        .photo-card { overflow:hidden; border-radius:1.25rem; }
+        .photo-card img { transition: transform 0.6s cubic-bezier(.25,.46,.45,.94); }
+        .photo-card:hover img { transform: scale(1.06); }
+        .cta-bg { background: linear-gradient(135deg, #061828 0%, #003F72 60%, #0d5a9e 100%); }
+        #chatPanel { display:none; }
+        #chatPanel.open { display:flex; }
+        #mobileMenu { transition: max-height 0.35s ease, opacity 0.35s ease; max-height:0; opacity:0; overflow:hidden; }
+        #mobileMenu.open { max-height:400px; opacity:1; }
+        .accent-line { width:3rem; height:3px; background: linear-gradient(90deg, #1e87f0, #A9F828); border-radius:9999px; }
+        .news-card { border: 1px solid rgba(0,63,114,0.08); transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+        .news-card:hover { border-color: rgba(0,63,114,0.2); box-shadow: 0 12px 40px rgba(0,63,114,0.08); transform: translateY(-4px); }
+        .filter-btn { transition: background 0.2s, color 0.2s; }
+        .filter-btn.active { background: #003F72; color: #fff; }
+        @keyframes slideUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+        .hero-badge { animation: slideUp 0.7s 0.3s both; }
+        .hero-title  { animation: slideUp 0.8s 0.5s both; }
+        .hero-sub    { animation: slideUp 0.8s 0.7s both; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 nav-solid">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="flex items-center justify-between h-[72px]">
+            <a href="index.html" class="flex-shrink-0 transition-opacity hover:opacity-80">
+                <img id="navLogo" src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-9">
+            </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Home</a>
+                <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">About Dane</a>
+                <a href="community-news.html" class="nav-link relative px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors hover:bg-white/10">Community News
+                    <span class="absolute bottom-1.5 left-4 right-4 h-0.5 bg-accent rounded-full"></span>
+                </a>
+                <a href="media.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Media</a>
+                <a href="stay-informed.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Stay Informed</a>
+                <a href="contact.html" class="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy shadow-md hover:bg-blue-50 transition-all hover:-translate-y-px">
+                    Contact Dane
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-navy-xdark/98 backdrop-blur-xl">
+        <div class="px-5 py-4 space-y-1">
+            <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Home</a>
+            <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">About Dane</a>
+            <a href="community-news.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-white bg-white/10">Community News</a>
+            <a href="media.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Media</a>
+            <a href="stay-informed.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Stay Informed</a>
+            <a href="contact.html" class="block mt-2 px-4 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white text-center">Contact Dane</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- PAGE HERO -->
+<section class="relative overflow-hidden pt-[72px]" style="background:#0a1f35">
+    <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg"
+         alt="Alberta landscape" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.75">
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(6,24,40,0.55) 0%,rgba(0,63,114,0.3) 60%, transparent 100%)"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 md:py-32">
+        <div class="max-w-2xl">
+            <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/90 text-sm font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-lime"></span>
+                Parkland Riding · Alberta
+            </div>
+            <h1 class="hero-title font-display text-5xl sm:text-6xl font-black text-white leading-tight tracking-tight uppercase mb-5">Community<br>News</h1>
+            <p class="hero-sub text-lg text-blue-200/80 leading-relaxed max-w-xl">The latest updates, announcements, and stories from Dane's office and the 18 communities of Parkland riding.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURED STORY -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="reveal">
+            <div class="accent-line mb-5"></div>
+            <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-8">Featured Story</p>
+        </div>
+        <div class="reveal group grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl shadow-navy/10 border border-gray-100 hover:shadow-2xl hover:shadow-navy/15 transition-all duration-500">
+            <div class="photo-card aspect-[16/9] lg:aspect-auto lg:min-h-[420px]">
+                <img src="../templates/yootheme/cache/c1/Home-Header-Image-Dane-HOC-Scheer-Mobile-c10ece55.jpeg"
+                     alt="Dane Lloyd in the House of Commons" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="bg-white p-10 lg:p-14 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="px-3 py-1 rounded-full bg-navy text-white text-xs font-semibold">Parliament</span>
+                    <span class="text-gray-400 text-sm">September 22, 2025</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-navy-dark leading-tight mb-5 group-hover:text-navy transition-colors">Dane Introduces McCann's Law — "No Body, No Parole"</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Dane introduced Bill C-236, the "Addressing the Continuing Victimization of Homicide Victims' Families Act," named after Lyle and Marie McCann — an elderly Alberta couple murdered in 2010 whose remains were never found. The bill makes refusal to disclose the location of victims' remains an aggravating sentencing factor and delays parole eligibility for offenders who refuse to cooperate.</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">Dane first campaigned on "no body, no parole" during his 2017 by-election and has introduced a version of this bill in every Parliament he has served — four times across eight years.</p>
+                <div class="flex items-center gap-2 text-navy font-semibold text-sm group-hover:gap-3 transition-all">
+                    Learn more about Bill C-236
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FILTER + NEWS GRID -->
+<section class="py-16 lg:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <!-- Filter bar -->
+        <div class="reveal flex flex-wrap gap-2 mb-12">
+            <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium border border-navy/20" onclick="filterNews('all', this)">All News</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-navy/20 text-gray-600 hover:border-navy" onclick="filterNews('riding', this)">Riding News</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-navy/20 text-gray-600 hover:border-navy" onclick="filterNews('parliament', this)">Parliament</button>
+        </div>
+
+        <!-- RIDING NEWS — Spruce Grove & Stony Plain -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Spruce Grove &amp; Stony Plain</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div id="newsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Stony Plain Budget -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/ed/Lucid_Realism_A_small_rural_Alberta_town_main_street_with_a_gr_2-ed4c2b70.jpeg"
+                         alt="Stony Plain" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Stony Plain</span>
+                        <span class="text-gray-400 text-xs">Budget &amp; Infrastructure</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Stony Plain Council Approves 2025 Spring Budget</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Council approved the 2025 Spring Budget Adjustment, reducing the tax increase from 7.41% to 6.71%, resulting in a $153,000 tax reduction for residents.</p>
+                </div>
+            </article>
+
+            <!-- Joint Trail Connection -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/94/photo-1558732599-2f570f74af6e-9419ddae.jpeg"
+                         alt="Trail between Stony Plain and Spruce Grove" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Spruce Grove &amp; Stony Plain</span>
+                        <span class="text-gray-400 text-xs">Community Project</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Joint Trail Connection Nears Completion</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Stony Plain and Spruce Grove announced the final phase of their Joint Trail Connection project, creating pathways between the two communities. Phase III involves paving the southern trail segment.</p>
+                </div>
+            </article>
+
+            <!-- New Public Works Building -->
+            <article class="reveal d-200 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/33/photo-1586769852044-692d6e3703f0-336a48a3.jpeg"
+                         alt="Stony Plain Public Works" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Stony Plain</span>
+                        <span class="text-gray-400 text-xs">Municipal</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">New Public Works Building Opens</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Stony Plain celebrated the opening of its new Public Works Administration Building, completed in just over a year. The facility serves as a critical hub for municipal operations.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- RIDING NEWS — Parkland County -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Parkland County</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Lowest Tax Rates -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg"
+                         alt="Parkland County landscape" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Parkland County</span>
+                        <span class="text-gray-400 text-xs">Budget &amp; Taxes</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Lowest Tax Rates in Edmonton Region</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Parkland County maintains tax rates amongst the lowest in the Edmonton region. The 2025 budget included a 2.5% municipal tax increase with strategic capital investments in roads, water infrastructure, and Wabamun projects.</p>
+                </div>
+            </article>
+
+            <!-- New MDP -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/dd/Lucid_Realism_A_group_of_smiling_Albertans_with_diverse_facial_1-dd334a9a.jpeg"
+                         alt="Parkland County community engagement" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Parkland County</span>
+                        <span class="text-gray-400 text-xs">Planning</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">New Municipal Development Plan Adopted</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Following 60+ hours of community engagement across 20+ open houses, Parkland County adopted a new 30-year Municipal Development Plan establishing vision for growth, recreation, and environmental protection.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- RIDING NEWS — Drayton Valley & Brazeau County -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Drayton Valley &amp; Brazeau County</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Mayor Recognition Awards -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/28/Lucid_Realism_cinematic_photo_closeup_of_Friendly_volunteers_g_0-280a8abd.jpeg"
+                         alt="Community recognition" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Drayton Valley</span>
+                        <span class="text-gray-400 text-xs">Community Recognition</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Mayor and Community Recognition Awards</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Drayton Valley held its Mayor and Community Recognition Gala, honoring outstanding community members across nine categories including Arts and Music, Business Achievement, Community Spirit, and Excellence in Athletics.</p>
+                </div>
+            </article>
+
+            <!-- Brazeau Stormwater -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/fe/field-of-rapeseeds-oilseed-rape-blutenmeer-yellow-46164-fee7bd52.jpeg"
+                         alt="Brazeau County" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Brazeau County</span>
+                        <span class="text-gray-400 text-xs">Infrastructure</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Provincial Funding for Stormwater Project</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Brazeau County received $748,230 through the Drought and Flood Protection Program for the Hill Top Stormwater Improvement Project, which will divert stormwater to natural drainage outlets.</p>
+                </div>
+            </article>
+
+            <!-- Cynthia Development -->
+            <article class="reveal d-200 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/ed/Lucid_Realism_A_small_rural_Alberta_town_main_street_with_a_gr_2-ed4c2b70.jpeg"
+                         alt="Hamlet of Cynthia" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Brazeau County</span>
+                        <span class="text-gray-400 text-xs">Hamlet of Cynthia</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Bylaws Passed for Cynthia Development</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Brazeau County Council passed bylaws for the Hamlet of Cynthia, including rezoning five county-owned lots from Urban Reserve to Hamlet Residential to support community growth.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- RIDING NEWS — Mayerthorpe & Lac Ste. Anne County -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Mayerthorpe &amp; Lac Ste. Anne County</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Fallen Four Memorial -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg"
+                         alt="Mayerthorpe memorial" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Mayerthorpe</span>
+                        <span class="text-gray-400 text-xs">Commemoration</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Fallen Four Memorial — 20th Anniversary</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Royal Canadian Air Force fighter jets conducted a flyover at the Fallen Four Memorial Park in Mayerthorpe to commemorate the 20th anniversary of the 2005 shooting that took the lives of four RCMP officers.</p>
+                </div>
+            </article>
+
+            <!-- West End Bus -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/dd/Lucid_Realism_A_group_of_smiling_Albertans_with_diverse_facial_1-dd334a9a.jpeg"
+                         alt="Seniors in Lac Ste. Anne County" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Lac Ste. Anne County</span>
+                        <span class="text-gray-400 text-xs">Regional Services</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">West End Bus Purchase for Seniors</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Lac Ste. Anne County joined Mayerthorpe and Woodlands County in purchasing a new 15-passenger West End Bus for $83,990 to serve seniors in the region. LSAC also funded dock repairs at Corsair Cove Boat Launch.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- RIDING NEWS — Yellowhead County -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Yellowhead County</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Major Land Acquisition -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/fe/field-of-rapeseeds-oilseed-rape-blutenmeer-yellow-46164-fee7bd52.jpeg"
+                         alt="Yellowhead County landscape" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Yellowhead County</span>
+                        <span class="text-gray-400 text-xs">Economic Development</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Major Land Acquisition for Growth</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Yellowhead County acquired approximately 1,850 acres on the county's west side as part of a long-term sustainable development strategy. The purchase, completed after over five years of collaboration with the Province, supports the Jasper/Hinton Airport as an economic driver.</p>
+                </div>
+            </article>
+
+            <!-- Farm Plan Workshop -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="riding">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/94/photo-1558732599-2f570f74af6e-9419ddae.jpeg"
+                         alt="Alberta farmland" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-lime/20 text-navy text-xs font-semibold">Brazeau County</span>
+                        <span class="text-gray-400 text-xs">Agriculture</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Environmental Farm Plan Workshop</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">An Alberta Environmental Farm Plan Workshop was held in Drayton Valley, hosted by Brazeau County and Farming Forward. The free event helped farmers identify environmental risks and prepare for funding opportunities like AgriInvest and the Resilient Agricultural Landscape Program.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- DANE IN PARLIAMENT -->
+        <div class="reveal mb-8">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <h3 class="font-display text-xl font-bold text-navy-dark">Dane in Parliament</h3>
+            </div>
+            <div class="mt-1 ml-8 h-0.5 w-16 bg-gradient-to-r from-accent to-lime rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <!-- Jasper Wildfire Inquiry -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/c1/Home-Header-Image-Dane-HOC-Scheer-Mobile-c10ece55.jpeg"
+                         alt="House of Commons" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Parliament</span>
+                        <span class="text-gray-400 text-xs">Shadow Minister</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Jasper Wildfire — Parliamentary Inquiry Reveals Federal Failure</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">As Shadow Minister for Emergency Preparedness, Dane led the Opposition's response to the 2024 Jasper wildfire. The parliamentary inquiry revealed that the federal government knew Jasper was in danger for years but failed to remove dry, pine beetle-infested deadwood.</p>
+                </div>
+            </article>
+
+            <!-- Ukrainian Heritage Month -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/33/photo-1586769852044-692d6e3703f0-336a48a3.jpeg"
+                         alt="Parliament" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Parliament</span>
+                        <span class="text-gray-400 text-xs">Feb 2026</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Ukrainian Heritage Month — Bill S-210 Passes Unanimously</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Dane spoke in the House in support of Bill S-210, establishing September as Ukrainian Heritage Month to recognize Canada's approximately 1.3 million Ukrainian-Canadians and their contributions. The bill passed 318–0.</p>
+                </div>
+            </article>
+
+            <!-- Energy Crisis Speech -->
+            <article class="reveal d-200 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/84/Lucid_Realism_Wide_panoramic_landscape_of_rural_Alberta_featur_2-84af7102.jpeg"
+                         alt="Alberta energy" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Parliament</span>
+                        <span class="text-gray-400 text-xs">Mar 2026</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Dane Speaks on Canada's Energy Opportunity</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">In the House of Commons, Dane argued that the world faces "the biggest energy crisis since the 1973 oil embargo" and that Canada is one of the countries best positioned to respond — championing Alberta's energy workers and responsible resource development.</p>
+                </div>
+            </article>
+
+            <!-- Bail Reform / Spring Meadows -->
+            <article class="reveal news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/c2/photo-1588591644329-ea4fd16fc6f3-c2e5b228.jpeg"
+                         alt="Community safety" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Parliament</span>
+                        <span class="text-gray-400 text-xs">Nov 2025</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Dane Raises Spring Meadows Crisis — Demands Bail Reform</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Dane spoke in the House about a constituent in Spring Meadows Estates whose neighbour's house was shot up twice in three weeks by extortionists. He supported the Bail and Sentencing Reform Act to reverse lenient policies on firearms offences and extortion.</p>
+                </div>
+            </article>
+
+            <!-- Glenn Hall Tribute -->
+            <article class="reveal d-100 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="../templates/yootheme/cache/94/photo-1558732599-2f570f74af6e-9419ddae.jpeg"
+                         alt="Prairie landscape" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Parliament</span>
+                        <span class="text-gray-400 text-xs">Feb 2026</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Glenn Hall Tribute — Honouring a Prairie Hockey Legend</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Dane delivered a Member's Statement in the House of Commons honouring the passing of legendary goaltender Glenn Hall, calling him "a true prairie boy" who embodied prairie values throughout his life.</p>
+                </div>
+            </article>
+
+            <!-- Re-elected 2025 -->
+            <article class="reveal d-200 news-card news-item bg-white rounded-2xl overflow-hidden" data-category="parliament">
+                <div class="photo-card aspect-[16/9]">
+                    <img src="https://danelloyd.ca/templates/yootheme/cache/7d/2025-0522-SVL-03-013-7db948e7.webp"
+                         alt="Dane Lloyd" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-xs font-semibold">Election</span>
+                        <span class="text-gray-400 text-xs">Apr 28, 2025</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-lg leading-snug mb-3">Dane Re-Elected with 75.2% — 53,468 Votes</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Dane was re-elected to represent the newly-redistributed Parkland riding with 75.2% of the vote — earning 53,468 votes and one of the strongest Conservative mandates in the country.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- 18 Communities Footer -->
+        <div class="reveal bg-white rounded-2xl border border-gray-100 p-8 text-center">
+            <h3 class="font-display text-lg font-bold text-navy-dark mb-3">Parkland Electoral District — 18 Communities</h3>
+            <p class="text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto">Cynthia · Brazeau County · Breton · Drayton Valley · Evansburg · Enoch · Entwistle · Kapasiwin · Lodgepole · Lac Ste. Anne County · Mayerthorpe · Parkland County · Seba Beach · Spruce Grove · Stony Plain · Tomahawk · Wildwood · Yellowhead County</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- NEWSLETTER CTA -->
+<section class="py-24 lg:py-32 cta-bg relative overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-10" style="background:radial-gradient(circle, #1e87f0, transparent)"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full opacity-10" style="background:radial-gradient(circle, #A9F828, transparent)"></div>
+    <div class="relative z-10 max-w-2xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
+        <div class="reveal">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-200 text-xs font-semibold uppercase tracking-widest mb-6">Never Miss an Update</span>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">Get News Delivered<br>to Your Inbox</h2>
+            <p class="text-blue-200/80 text-lg mb-10">Subscribe to receive Dane's latest statements, community news, and riding updates directly.</p>
+        </div>
+        <form id="newsletterForm" class="reveal d-200 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleNewsletter(event)">
+            <input type="email" required placeholder="your@email.com"
+                   class="flex-1 px-5 py-4 rounded-xl text-base bg-white/10 border border-white/20 text-white placeholder-blue-300/60 focus:outline-none focus:bg-white/15 focus:border-white/40 transition-all backdrop-blur-sm">
+            <button type="submit" class="px-8 py-4 rounded-xl bg-lime text-navy-xdark font-bold text-sm hover:bg-white hover:shadow-xl transition-all whitespace-nowrap shadow-lg">Subscribe</button>
+        </form>
+        <p id="newsletterSuccess" class="hidden text-white text-lg font-semibold py-4">Thank you for subscribing!</p>
+        <p class="reveal d-300 mt-5 text-blue-300/50 text-xs">No spam, ever. Unsubscribe any time.</p>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-navy-xdark text-white">
+    <div class="h-0.5 w-full" style="background:linear-gradient(90deg,#003F72,#1e87f0,#A9F828,#1e87f0,#003F72)"></div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="sm:col-span-2 lg:col-span-1">
+                <img src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-10 mb-5">
+                <p class="text-blue-300/70 text-sm leading-relaxed mb-6">Proudly serving the people of Parkland, Alberta in the House of Commons.</p>
+                <div class="flex gap-2.5">
+                    <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="https://x.com/danelloydmp" target="_blank" rel="noopener" aria-label="X / Twitter" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/danelloydcpc/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@danelloydmp4541" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Navigate</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">About Dane</a></li>
+                    <li><a href="community-news.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Community News</a></li>
+                    <li><a href="media.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Media</a></li>
+                    <li><a href="stay-informed.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Stay Informed</a></li>
+                    <li><a href="contact.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Contact Dane</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Constituency Office</h4>
+                <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                    <p>#102-4807 44 Avenue<br>Stony Plain, AB T7X 1V5</p>
+                    <p><a href="tel:+17808232050" class="hover:text-white transition-colors">(780) 823-2050</a></p>
+                    <p>Fax: (780) 823-2055</p>
+                    <p><a href="mailto:dane.lloyd@parl.gc.ca" class="hover:text-white transition-colors">dane.lloyd@parl.gc.ca</a></p>
+                </address>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Parliament Hill</h4>
+                <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                    <p>House of Commons<br>Ottawa, Ontario K1A 0A6</p>
+                    <p>Conservative Party of Canada</p>
+                    <p class="pt-1 text-blue-300/50 text-xs">Shadow Minister<br>Emergency Preparedness &amp;<br>Community Resilience</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/8 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-blue-300/40 text-sm">&copy; 2025 Dane Lloyd, MP. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-blue-300/40 text-xs">
+                <span>Parkland, Alberta</span>
+                <span class="w-1 h-1 rounded-full bg-blue-300/30"></span>
+                <span>House of Commons</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- CHAT WIDGET -->
+<div class="fixed bottom-6 right-6 z-50" id="chatWidget">
+    <button id="chatToggle" class="relative w-14 h-14 rounded-full text-white shadow-2xl shadow-navy/40 flex items-center justify-center hover:scale-105 transition-transform" style="background:linear-gradient(135deg,#003F72,#0a2540)" aria-label="Open chat">
+        <svg id="chatIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <svg id="chatIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-lime rounded-full border-2 border-navy-xdark"></span>
+    </button>
+    <div id="chatPanel" class="absolute bottom-[72px] right-0 w-[340px] max-w-[calc(100vw-48px)] h-[460px] rounded-2xl shadow-2xl shadow-black/20 flex-col overflow-hidden">
+        <div style="background:linear-gradient(135deg,#003F72,#0a2540)" class="px-5 py-4 flex items-center gap-3">
+            <div class="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-white/10">
+                <img src="https://danelloyd.ca/templates/yootheme/cache/7d/2025-0522-SVL-03-013-7db948e7.webp" alt="Dane" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="font-semibold text-sm text-white">Dane Lloyd's Office</div>
+                <div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span><span class="text-xs text-blue-200/80">Online · Demo mode</span></div>
+            </div>
+            <button id="chatClose" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white text-lg leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50 flex flex-col">
+            <div class="max-w-[85%] p-3.5 rounded-2xl rounded-tl-sm bg-white text-gray-700 text-sm shadow-sm leading-relaxed">
+                Hi! Welcome to Dane Lloyd's website. How can we help you today?
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                    <button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button>
+                    <button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button>
+                    <button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button>
+                    <button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-3 bg-white border-t border-gray-100 flex gap-2 items-center">
+            <input id="chatInput" type="text" placeholder="Type a message…" maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+            <button id="chatSend" class="w-9 h-9 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function() {
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        var m = document.getElementById('mobileMenu');
+        var open = m.classList.toggle('open');
+        this.setAttribute('aria-expanded', open);
+    });
+
+    var ro = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+
+    window.handleNewsletter = function(e) {
+        e.preventDefault();
+        document.getElementById('newsletterForm').classList.add('hidden');
+        document.getElementById('newsletterSuccess').classList.remove('hidden');
+    };
+
+    window.filterNews = function(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        document.querySelectorAll('.news-item').forEach(function(item) {
+            if (cat === 'all' || item.dataset.category === cat) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        document.querySelectorAll('[data-section-for]').forEach(function(hdr) {
+            if (cat === 'all') { hdr.style.display = ''; return; }
+            hdr.style.display = hdr.dataset.sectionFor === cat ? '' : 'none';
+        });
+    };
+
+    (function() {
+        var panel = document.getElementById('chatPanel');
+        var msgs  = document.getElementById('chatMessages');
+        var input = document.getElementById('chatInput');
+        var iconOpen  = document.getElementById('chatIconOpen');
+        var iconClose = document.getElementById('chatIconClose');
+        var isOpen = false;
+        var replies = {
+            contact:    { q: 'How do I contact Dane?', a: 'You can reach Dane\'s office at <a href="contact.html" class="underline font-medium text-navy">contact page</a>, call <strong>(780) 823-2050</strong>, or visit #102-4807 44 Avenue, Stony Plain.' },
+            about:      { q: 'Tell me about Dane', a: 'Dane Lloyd is the MP for Parkland, Alberta. Read his full bio on the <a href="about.html" class="underline font-medium text-navy">About page</a>.' },
+            newsletter: { q: 'How do I stay informed?', a: 'Sign up for riding updates on the <a href="stay-informed.html" class="underline font-medium text-navy">Stay Informed page</a>.' },
+            events:     { q: 'News and events', a: 'Check the <a href="community-news.html" class="underline font-medium text-navy">Community News page</a> for the latest from across Parkland.' },
+            fallback:   { a: 'Thanks for your message! For specific questions, please visit our <a href="contact.html" class="underline font-medium text-navy">Contact page</a> or call <strong>(780) 823-2050</strong>.' }
+        };
+        function chips() { return '<div class="flex flex-wrap gap-1.5 mt-3"><button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button><button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button><button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button><button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button></div>'; }
+        function addMsg(text, isUser) { var d = document.createElement('div'); d.className = 'max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed ' + (isUser ? 'bg-navy text-white self-end ml-auto rounded-tr-sm' : 'bg-white text-gray-700 shadow-sm rounded-tl-sm'); if (isUser) d.textContent = text; else d.innerHTML = text + chips(); msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function handle(key) { var r = replies[key] || replies.fallback; if (r.q) addMsg(r.q, true); setTimeout(function() { addMsg(r.a, false); }, 380); }
+        function togglePanel() { isOpen = !isOpen; if (isOpen) panel.classList.add('open'); else panel.classList.remove('open'); iconOpen.classList.toggle('hidden', isOpen); iconClose.classList.toggle('hidden', !isOpen); }
+        document.getElementById('chatToggle').addEventListener('click', togglePanel);
+        document.getElementById('chatClose').addEventListener('click', function() { isOpen = true; togglePanel(); });
+        function send() { var t = (input.value || '').trim(); if (!t) return; input.value = ''; addMsg(t, true); var k = 'fallback', l = t.toLowerCase(); for (var key in replies) { if (key !== 'fallback' && l.indexOf(key) >= 0) { k = key; break; } } setTimeout(function() { addMsg(replies[k].a, false); }, 380); }
+        document.getElementById('chatSend').addEventListener('click', send);
+        input.addEventListener('keydown', function(e) { if (e.key === 'Enter') send(); });
+        msgs.addEventListener('click', function(e) { var btn = e.target.closest('[data-reply]'); if (btn) handle(btn.dataset.reply); });
+        if (!sessionStorage.getItem('chatOpened')) { setTimeout(function() { if (!isOpen) { togglePanel(); sessionStorage.setItem('chatOpened', '1'); } }, 4000); }
+    })();
+})();
+</script>
+</body>
+</html>

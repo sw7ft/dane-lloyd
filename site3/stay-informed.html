@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Informed — Dane Lloyd MP for Parkland, Alberta</title>
+    <meta name="description" content="Sign up for Dane Lloyd's newsletter, follow on social media, and get involved with Parkland riding.">
+    <link rel="icon" href="../images/yootheme/icons/96x96-favicon.png" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navy:   { DEFAULT: '#003F72', dark: '#0a2540', light: '#0d5a9e', xdark: '#061828' },
+                    accent: { DEFAULT: '#1e87f0', warm: '#f59e0b' },
+                    lime:   '#A9F828',
+                },
+                fontFamily: {
+                    sans:    ['Inter', 'system-ui', 'sans-serif'],
+                    display: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+                },
+                backgroundImage: {
+                    'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E\")",
+                },
+            }
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        .nav-glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.88); border-bottom: 1px solid rgba(0,63,114,0.06); }
+        .nav-solid { background: rgba(10,37,64,0.97); backdrop-filter: blur(20px); }
+        .hero-grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.04; }
+        .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.in { opacity:1; transform:translateY(0); }
+        .reveal-left  { opacity:0; transform:translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal-left.in { opacity:1; transform:translateX(0); }
+        .reveal-right { opacity:0; transform:translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal-right.in { opacity:1; transform:translateX(0); }
+        .d-100 { transition-delay: 0.1s; }
+        .d-200 { transition-delay: 0.2s; }
+        .d-300 { transition-delay: 0.3s; }
+        .d-400 { transition-delay: 0.4s; }
+        .photo-card { overflow:hidden; border-radius:1.25rem; }
+        .photo-card img { transition: transform 0.6s cubic-bezier(.25,.46,.45,.94); }
+        .photo-card:hover img { transform: scale(1.06); }
+        .cta-bg { background: linear-gradient(135deg, #061828 0%, #003F72 60%, #0d5a9e 100%); }
+        #chatPanel { display:none; }
+        #chatPanel.open { display:flex; }
+        #mobileMenu { transition: max-height 0.35s ease, opacity 0.35s ease; max-height:0; opacity:0; overflow:hidden; }
+        #mobileMenu.open { max-height:400px; opacity:1; }
+        .accent-line { width:3rem; height:3px; background: linear-gradient(90deg, #1e87f0, #A9F828); border-radius:9999px; }
+        .social-card { border: 1px solid rgba(0,63,114,0.1); transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+        .social-card:hover { border-color: rgba(0,63,114,0.3); box-shadow: 0 12px 40px rgba(0,63,114,0.1); transform: translateY(-4px); }
+        @keyframes slideUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+        .hero-badge { animation: slideUp 0.7s 0.3s both; }
+        .hero-title  { animation: slideUp 0.8s 0.5s both; }
+        .hero-sub    { animation: slideUp 0.8s 0.7s both; }
+        .hero-btns   { animation: slideUp 0.8s 0.9s both; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 nav-solid">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="flex items-center justify-between h-[72px]">
+            <a href="index.html" class="flex-shrink-0 transition-opacity hover:opacity-80">
+                <img id="navLogo" src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-9">
+            </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Home</a>
+                <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">About Dane</a>
+                <a href="community-news.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Community News</a>
+                <a href="media.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Media</a>
+                <a href="stay-informed.html" class="nav-link relative px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors hover:bg-white/10">Stay Informed
+                    <span class="absolute bottom-1.5 left-4 right-4 h-0.5 bg-accent rounded-full"></span>
+                </a>
+                <a href="contact.html" class="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy shadow-md hover:bg-blue-50 transition-all hover:-translate-y-px">
+                    Contact Dane
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-navy-xdark/98 backdrop-blur-xl">
+        <div class="px-5 py-4 space-y-1">
+            <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Home</a>
+            <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">About Dane</a>
+            <a href="community-news.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Community News</a>
+            <a href="media.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Media</a>
+            <a href="stay-informed.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-white bg-white/10">Stay Informed</a>
+            <a href="contact.html" class="block mt-2 px-4 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white text-center">Contact Dane</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- PAGE HERO -->
+<section class="relative overflow-hidden pt-[72px]" style="background:#0a1f35">
+    <img src="../templates/yootheme/cache/c2/photo-1588591644329-ea4fd16fc6f3-c2e5b228.jpeg"
+         alt="Stay Informed" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.75">
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(6,24,40,0.55) 0%,rgba(0,63,114,0.3) 60%, transparent 100%)"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 md:py-32">
+        <div class="max-w-2xl">
+            <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/90 text-sm font-medium mb-6">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-lime"></span>
+                </span>
+                Stay Connected · Parkland Riding
+            </div>
+            <h1 class="hero-title font-display text-5xl sm:text-6xl font-black text-white leading-tight tracking-tight uppercase mb-5">Stay<br>Informed</h1>
+            <p class="hero-sub text-lg text-blue-200/80 leading-relaxed max-w-xl">Subscribe to Dane's newsletter, follow on social media, and join the team making a difference for Parkland riding.</p>
+            <div class="hero-btns mt-8 flex flex-wrap gap-4">
+                <a href="#newsletter" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-lime text-navy-xdark font-bold text-sm shadow-lg hover:-translate-y-px hover:shadow-xl transition-all">
+                    Subscribe to Newsletter
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+                <a href="#get-involved" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 transition-all">
+                    Get Involved
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- NEWSLETTER SECTION -->
+<section id="newsletter" class="py-24 lg:py-32 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <!-- Text -->
+            <div class="space-y-8">
+                <div class="reveal">
+                    <div class="accent-line mb-5"></div>
+                    <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Newsletter</p>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-navy-dark leading-tight">Get Dane's Updates<br>in Your Inbox</h2>
+                </div>
+                <div class="reveal d-100 space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <p>Join thousands of Parkland residents who receive Dane's regular updates — including riding news, parliamentary highlights, community events, and important announcements.</p>
+                    <p>Dane's newsletter is the best way to stay connected with what's happening in Ottawa and across Parkland riding.</p>
+                </div>
+                <div class="reveal d-200 flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <div class="w-8 h-8 rounded-full bg-navy/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-sm">Riding updates and community news</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <div class="w-8 h-8 rounded-full bg-navy/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-sm">Parliamentary highlights and statements</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <div class="w-8 h-8 rounded-full bg-navy/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-sm">Upcoming events and town halls</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-600">
+                        <div class="w-8 h-8 rounded-full bg-navy/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-sm">No spam — unsubscribe any time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form card -->
+            <div class="reveal-right">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-xl shadow-navy/5">
+                    <h3 class="font-display text-2xl font-bold text-navy-dark mb-2">Subscribe Today</h3>
+                    <p class="text-gray-500 text-sm mb-8">Free, no spam. Unsubscribe any time.</p>
+                    <form id="newsletterFormMain" onsubmit="handleNewsletterMain(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">First Name</label>
+                            <input type="text" required placeholder="Your first name"
+                                   class="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Last Name</label>
+                            <input type="text" placeholder="Your last name"
+                                   class="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Email Address</label>
+                            <input type="email" required placeholder="your@email.com"
+                                   class="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Community</label>
+                            <select class="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition-all bg-white text-gray-700">
+                                <option value="">Select your community</option>
+                                <option>Spruce Grove</option>
+                                <option>Stony Plain</option>
+                                <option>Parkland County</option>
+                                <option>Drayton Valley</option>
+                                <option>Brazeau County</option>
+                                <option>Mayerthorpe</option>
+                                <option>Lac Ste. Anne County</option>
+                                <option>Yellowhead County</option>
+                                <option>Evansburg</option>
+                                <option>Enoch</option>
+                                <option>Entwistle</option>
+                                <option>Breton</option>
+                                <option>Cynthia</option>
+                                <option>Kapasiwin</option>
+                                <option>Lodgepole</option>
+                                <option>Seba Beach</option>
+                                <option>Tomahawk</option>
+                                <option>Wildwood</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-navy text-white font-bold text-sm hover:bg-navy-dark transition-all shadow-lg shadow-navy/20 hover:shadow-xl hover:shadow-navy/30 hover:-translate-y-px mt-2">
+                            Subscribe to Newsletter
+                        </button>
+                    </form>
+                    <p id="newsletterSuccessMain" class="hidden text-navy font-semibold text-center py-4">Thank you for subscribing!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SOCIAL MEDIA -->
+<section class="py-24 lg:py-32 bg-slate-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center mb-16 reveal">
+            <div class="inline-block accent-line mx-auto mb-5"></div>
+            <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Social Media</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-navy-dark">Follow Dane Online</h2>
+            <p class="mt-4 text-gray-500 text-lg max-w-xl mx-auto">Stay up to date with Dane's latest statements, videos, and community events across all platforms.</p>
+        </div>
+
+        <!-- Platform quick-links -->
+        <div class="grid sm:grid-cols-4 gap-5 mb-16">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener"
+               class="reveal social-card bg-white rounded-2xl p-7 group text-center">
+                <div class="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </div>
+                <h3 class="font-bold text-navy-dark text-lg mb-1">Facebook</h3>
+                <p class="text-gray-500 text-sm mb-4">@DaneLloydCPC</p>
+                <span class="inline-flex items-center gap-1.5 text-blue-600 text-sm font-semibold group-hover:gap-2.5 transition-all">
+                    Follow <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </span>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/danelloydmp" target="_blank" rel="noopener"
+               class="reveal d-100 social-card bg-white rounded-2xl p-7 group text-center">
+                <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </div>
+                <h3 class="font-bold text-navy-dark text-lg mb-1">X / Twitter</h3>
+                <p class="text-gray-500 text-sm mb-4">@danelloydmp</p>
+                <span class="inline-flex items-center gap-1.5 text-gray-800 text-sm font-semibold group-hover:gap-2.5 transition-all">
+                    Follow <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </span>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/danelloydcpc/" target="_blank" rel="noopener"
+               class="reveal d-200 social-card bg-white rounded-2xl p-7 group text-center">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <h3 class="font-bold text-navy-dark text-lg mb-1">Instagram</h3>
+                <p class="text-gray-500 text-sm mb-4">@danelloydcpc</p>
+                <span class="inline-flex items-center gap-1.5 text-pink-600 text-sm font-semibold group-hover:gap-2.5 transition-all">
+                    Follow <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </span>
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/channel/UCQpCRvUGwDKXUi6l9Ht0SNg" target="_blank" rel="noopener"
+               class="reveal d-300 social-card bg-white rounded-2xl p-7 group text-center">
+                <div class="w-14 h-14 rounded-2xl bg-red-600 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+                <h3 class="font-bold text-navy-dark text-lg mb-1">YouTube</h3>
+                <p class="text-gray-500 text-sm mb-4">Dane Lloyd, MP</p>
+                <span class="inline-flex items-center gap-1.5 text-red-600 text-sm font-semibold group-hover:gap-2.5 transition-all">
+                    Subscribe <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </span>
+            </a>
+        </div>
+
+        <!-- Live embed widgets -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Facebook Page Plugin -->
+            <div class="reveal bg-white rounded-2xl shadow-sm overflow-hidden" style="border:1px solid rgba(0,63,114,0.1)">
+                <div class="px-6 pt-5 pb-3 flex items-center gap-3 border-b border-gray-100">
+                    <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </div>
+                    <span class="font-semibold text-navy-dark text-sm">Facebook — @DaneLloydCPC</span>
+                    <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener" class="ml-auto text-xs text-blue-600 hover:underline font-medium">Open ↗</a>
+                </div>
+                <div class="flex justify-center py-4" id="fb-page-widget">
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/DaneLloydCPC"
+                         data-tabs="timeline"
+                         data-width="500"
+                         data-height="500"
+                         data-small-header="true"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="false"></div>
+                </div>
+            </div>
+
+            <!-- YouTube channel embed -->
+            <div class="reveal d-100 bg-white rounded-2xl shadow-sm overflow-hidden" style="border:1px solid rgba(0,63,114,0.1)">
+                <div class="px-6 pt-5 pb-3 flex items-center gap-3 border-b border-gray-100">
+                    <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </div>
+                    <span class="font-semibold text-navy-dark text-sm">YouTube — Dane Lloyd, MP</span>
+                    <a href="https://www.youtube.com/channel/UCQpCRvUGwDKXUi6l9Ht0SNg" target="_blank" rel="noopener" class="ml-auto text-xs text-red-600 hover:underline font-medium">Open ↗</a>
+                </div>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                    <iframe
+                        src="https://www.youtube.com/embed/videoseries?list=UUQpCRvUGwDKXUi6l9Ht0SNg&rel=0&modestbranding=1"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title="Dane Lloyd MP — YouTube Channel">
+                    </iframe>
+                </div>
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <p class="text-gray-500 text-xs">Watch Dane's latest videos, speeches, and community updates.</p>
+                    <a href="https://www.youtube.com/channel/UCQpCRvUGwDKXUi6l9Ht0SNg" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-red-600 text-white text-xs font-semibold hover:bg-red-700 transition-colors">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        Subscribe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facebook JS SDK (loads the FB Page Plugin) -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
+</script>
+
+
+<!-- GET INVOLVED -->
+<section id="get-involved" class="py-24 lg:py-32 bg-navy-xdark relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 hero-grain pointer-events-none"></div>
+    <svg class="absolute -right-40 -bottom-40 w-[500px] h-[500px] text-navy opacity-60" fill="currentColor" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" opacity="0.3"/></svg>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center mb-16 reveal">
+            <div class="inline-block accent-line mx-auto mb-5"></div>
+            <p class="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-3">Get Involved</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-white">Join the Team</h2>
+            <p class="mt-4 text-blue-200/70 text-lg max-w-xl mx-auto">There are many ways to support Dane and make a difference for Parkland riding.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6">
+            <!-- Volunteer -->
+            <div class="reveal d-100 bg-white/5 rounded-2xl p-8 border border-white/10 hover:bg-white/8 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-lime/20 flex items-center justify-center mb-6 group-hover:bg-lime/30 transition-colors">
+                    <svg class="w-6 h-6 text-lime" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Volunteer</h3>
+                <p class="text-blue-200/70 text-sm leading-relaxed mb-6">Join Dane's volunteer team and help make a difference in your community — from canvassing and events to office support.</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 text-lime text-sm font-semibold hover:gap-3 transition-all group">
+                    Sign up to volunteer
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Careers -->
+            <div class="reveal d-200 bg-white/5 rounded-2xl p-8 border border-white/10 hover:bg-white/8 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Careers</h3>
+                <p class="text-blue-200/70 text-sm leading-relaxed mb-6">Interested in working for Dane's constituency or parliamentary office? We're always looking for passionate, dedicated Albertans.</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 text-accent text-sm font-semibold hover:gap-3 transition-all group">
+                    View opportunities
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Donate -->
+            <div class="reveal d-300 bg-white/5 rounded-2xl p-8 border border-white/10 hover:bg-white/8 hover:border-white/20 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white/15 transition-colors">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Support Dane</h3>
+                <p class="text-blue-200/70 text-sm leading-relaxed mb-6">Support the Conservative Party of Canada and help Dane continue fighting for Parkland families, farmers, and small businesses.</p>
+                <a href="https://www.conservative.ca/donate/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-white text-sm font-semibold hover:gap-3 transition-all group">
+                    Donate to the CPC
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- PHOTO STRIP -->
+<section class="relative overflow-hidden h-[380px] md:h-[460px]">
+    <img src="../templates/yootheme/cache/28/Lucid_Realism_cinematic_photo_closeup_of_Friendly_volunteers_g_0-280a8abd.jpeg"
+         alt="Parkland volunteers" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(6,24,40,0.88) 0%, rgba(6,24,40,0.55) 45%, transparent 80%)"></div>
+    <div class="absolute inset-0 flex items-center">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 w-full">
+            <div class="max-w-xl reveal">
+                <p class="text-sm font-semibold text-blue-300 uppercase tracking-widest mb-4">Together</p>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">Making a Difference<br>for Parkland</h2>
+                <p class="text-blue-100/80 text-lg leading-relaxed mb-8">Every volunteer, every subscriber, and every voice makes Dane's work stronger. Join the team today.</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-navy font-bold text-sm hover:-translate-y-px hover:shadow-xl transition-all shadow-lg">
+                    Contact Dane's Office
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-navy-xdark text-white">
+    <div class="h-0.5 w-full" style="background:linear-gradient(90deg,#003F72,#1e87f0,#A9F828,#1e87f0,#003F72)"></div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="sm:col-span-2 lg:col-span-1">
+                <img src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-10 mb-5">
+                <p class="text-blue-300/70 text-sm leading-relaxed mb-6">Proudly serving the people of Parkland, Alberta in the House of Commons.</p>
+                <div class="flex gap-2.5">
+                    <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="https://x.com/danelloydmp" target="_blank" rel="noopener" aria-label="X / Twitter" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/danelloydcpc/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@danelloydmp4541" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Navigate</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">About Dane</a></li>
+                    <li><a href="community-news.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Community News</a></li>
+                    <li><a href="media.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Media</a></li>
+                    <li><a href="stay-informed.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Stay Informed</a></li>
+                    <li><a href="contact.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Contact Dane</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Constituency Office</h4>
+                <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                    <p>#102-4807 44 Avenue<br>Stony Plain, AB T7X 1V5</p>
+                    <p><a href="tel:+17808232050" class="hover:text-white transition-colors">(780) 823-2050</a></p>
+                    <p>Fax: (780) 823-2055</p>
+                    <p><a href="mailto:dane.lloyd@parl.gc.ca" class="hover:text-white transition-colors">dane.lloyd@parl.gc.ca</a></p>
+                </address>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Parliament Hill</h4>
+                <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                    <p>House of Commons<br>Ottawa, Ontario K1A 0A6</p>
+                    <p>Conservative Party of Canada</p>
+                    <p class="pt-1 text-blue-300/50 text-xs">Shadow Minister<br>Emergency Preparedness &amp;<br>Community Resilience</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/8 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-blue-300/40 text-sm">&copy; 2026 Dane Lloyd, MP. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-blue-300/40 text-xs">
+                <span>Parkland, Alberta</span>
+                <span class="w-1 h-1 rounded-full bg-blue-300/30"></span>
+                <span>House of Commons</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- CHAT WIDGET -->
+<div class="fixed bottom-6 right-6 z-50" id="chatWidget">
+    <button id="chatToggle" class="relative w-14 h-14 rounded-full text-white shadow-2xl shadow-navy/40 flex items-center justify-center hover:scale-105 transition-transform" style="background:linear-gradient(135deg,#003F72,#0a2540)" aria-label="Open chat">
+        <svg id="chatIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <svg id="chatIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-lime rounded-full border-2 border-navy-xdark"></span>
+    </button>
+    <div id="chatPanel" class="absolute bottom-[72px] right-0 w-[340px] max-w-[calc(100vw-48px)] h-[460px] rounded-2xl shadow-2xl shadow-black/20 flex-col overflow-hidden">
+        <div style="background:linear-gradient(135deg,#003F72,#0a2540)" class="px-5 py-4 flex items-center gap-3">
+            <div class="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-white/10">
+                <img src="https://danelloyd.ca/templates/yootheme/cache/7d/2025-0522-SVL-03-013-7db948e7.webp" alt="Dane" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="font-semibold text-sm text-white">Dane Lloyd's Office</div>
+                <div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span><span class="text-xs text-blue-200/80">Online · Demo mode</span></div>
+            </div>
+            <button id="chatClose" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white text-lg leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50 flex flex-col">
+            <div class="max-w-[85%] p-3.5 rounded-2xl rounded-tl-sm bg-white text-gray-700 text-sm shadow-sm leading-relaxed">
+                Hi! Welcome to Dane Lloyd's website. How can we help you today?
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                    <button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button>
+                    <button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button>
+                    <button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button>
+                    <button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-3 bg-white border-t border-gray-100 flex gap-2 items-center">
+            <input id="chatInput" type="text" placeholder="Type a message…" maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+            <button id="chatSend" class="w-9 h-9 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function() {
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        var m = document.getElementById('mobileMenu');
+        var open = m.classList.toggle('open');
+        this.setAttribute('aria-expanded', open);
+    });
+
+    var ro = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) { ro.observe(el); });
+
+    window.handleNewsletterMain = function(e) {
+        e.preventDefault();
+        document.getElementById('newsletterFormMain').classList.add('hidden');
+        document.getElementById('newsletterSuccessMain').classList.remove('hidden');
+    };
+
+    (function() {
+        var panel = document.getElementById('chatPanel');
+        var msgs  = document.getElementById('chatMessages');
+        var input = document.getElementById('chatInput');
+        var iconOpen  = document.getElementById('chatIconOpen');
+        var iconClose = document.getElementById('chatIconClose');
+        var isOpen = false;
+        var replies = {
+            contact:    { q: 'How do I contact Dane?', a: 'You can reach Dane\'s office at <a href="contact.html" class="underline font-medium text-navy">contact page</a>, call <strong>(780) 823-2050</strong>, or visit #102-4807 44 Avenue, Stony Plain.' },
+            about:      { q: 'Tell me about Dane', a: 'Dane Lloyd is the MP for Parkland, Alberta. Read his full bio on the <a href="about.html" class="underline font-medium text-navy">About page</a>.' },
+            newsletter: { q: 'How do I stay informed?', a: 'Sign up for riding updates on the <a href="stay-informed.html" class="underline font-medium text-navy">Stay Informed page</a>.' },
+            events:     { q: 'News and events', a: 'Check the <a href="community-news.html" class="underline font-medium text-navy">Community News page</a> for the latest from across Parkland.' },
+            fallback:   { a: 'Thanks for your message! For specific questions, please visit our <a href="contact.html" class="underline font-medium text-navy">Contact page</a> or call <strong>(780) 823-2050</strong>.' }
+        };
+        function chips() { return '<div class="flex flex-wrap gap-1.5 mt-3"><button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button><button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button><button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button><button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button></div>'; }
+        function addMsg(text, isUser) { var d = document.createElement('div'); d.className = 'max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed ' + (isUser ? 'bg-navy text-white self-end ml-auto rounded-tr-sm' : 'bg-white text-gray-700 shadow-sm rounded-tl-sm'); if (isUser) d.textContent = text; else d.innerHTML = text + chips(); msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function handle(key) { var r = replies[key] || replies.fallback; if (r.q) addMsg(r.q, true); setTimeout(function() { addMsg(r.a, false); }, 380); }
+        function togglePanel() { isOpen = !isOpen; if (isOpen) panel.classList.add('open'); else panel.classList.remove('open'); iconOpen.classList.toggle('hidden', isOpen); iconClose.classList.toggle('hidden', !isOpen); }
+        document.getElementById('chatToggle').addEventListener('click', togglePanel);
+        document.getElementById('chatClose').addEventListener('click', function() { isOpen = true; togglePanel(); });
+        function send() { var t = (input.value || '').trim(); if (!t) return; input.value = ''; addMsg(t, true); var k = 'fallback', l = t.toLowerCase(); for (var key in replies) { if (key !== 'fallback' && l.indexOf(key) >= 0) { k = key; break; } } setTimeout(function() { addMsg(replies[k].a, false); }, 380); }
+        document.getElementById('chatSend').addEventListener('click', send);
+        input.addEventListener('keydown', function(e) { if (e.key === 'Enter') send(); });
+        msgs.addEventListener('click', function(e) { var btn = e.target.closest('[data-reply]'); if (btn) handle(btn.dataset.reply); });
+        if (!sessionStorage.getItem('chatOpened')) { setTimeout(function() { if (!isOpen) { togglePanel(); sessionStorage.setItem('chatOpened', '1'); } }, 4000); }
+    })();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,3800 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Privacy Sandbox">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#fff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/privacysandbox/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/touch-icon.png"><link rel="canonical" href="https://privacysandbox.google.com/private-advertising/topics"><link rel="search" type="application/opensearchdescription+xml"
+            title="Privacy Sandbox" href="https://privacysandbox.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://privacysandbox.google.com/private-advertising/topics" /><link rel="alternate" hreflang="x-default" href="https://privacysandbox.google.com/private-advertising/topics" /><link rel="alternate" hreflang="ar"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://privacysandbox.google.com/private-advertising/topics?hl=vi" /><title>Overview of Topics API &nbsp;|&nbsp; Privacy Sandbox</title>
+
+<meta property="og:title" content="Overview of Topics API &nbsp;|&nbsp; Privacy Sandbox"><meta property="og:url" content="https://privacysandbox.google.com/private-advertising/topics"><meta property="og:image" content="https://privacysandbox.google.com/static/privacy-sandbox-for-developers.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class="color-scheme--light"
+        template="landing"
+        theme="white"
+        type="landing"
+        
+        appearance
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="privacySandbox" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/lockup.svg" class="devsite-site-logo" alt="Privacy Sandbox">
+  </picture>
+  
+</a>
+
+
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://privacysandbox.google.com/"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://privacysandbox.google.com/"
+    
+       track-type="nav"
+       track-metadata-position="nav - overview"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Overview"
+         
+           track-name="overview"
+         
+       >
+    Overview
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://privacysandbox.google.com/cookies"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://privacysandbox.google.com/cookies"
+    
+       track-type="nav"
+       track-metadata-position="nav - cookies"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Cookies"
+         
+           track-name="cookies"
+         
+       >
+    Cookies
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://privacysandbox.google.com/private-advertising/console/create-your-account"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://privacysandbox.google.com/private-advertising/console/create-your-account"
+    
+       track-type="nav"
+       track-metadata-position="nav - private advertising"
+       track-metadata-module="primary nav"
+       aria-label="Private advertising, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Private advertising"
+         
+           track-name="private advertising"
+         
+       >
+    Private advertising
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://privacysandbox.google.com/protections"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://privacysandbox.google.com/protections"
+    
+       track-type="nav"
+       track-metadata-position="nav - privacy protections"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Privacy protections"
+         
+           track-name="privacy protections"
+         
+       >
+    Privacy protections
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://privacysandbox.google.com/blog"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://privacysandbox.google.com/blog"
+    
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Privacy Sandbox"
+    tenant-name="Privacy Sandbox"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://privacysandbox.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          <devsite-appearance-selector></devsite-appearance-selector>
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+            <a class="devsite-header-link devsite-top-button button gc-analytics-event "
+    href="//privacysandbox.com/"
+    data-category="Site-Wide Custom Events"
+    data-label="Site header link: Home"
+    >
+  Home
+</a>
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://privacysandbox.google.com/private-advertising/console/create-your-account"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Private advertising
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="privacySandbox" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/lockup.svg" class="devsite-site-logo" alt="Privacy Sandbox">
+  </picture>
+  
+</a>
+
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Overview"
+      
+        track-name="overview"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/cookies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Cookies"
+      
+        track-name="cookies"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cookies"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cookies
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/private-advertising/console/create-your-account"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Private advertising"
+      
+        track-name="private advertising"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Private advertising"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Private advertising
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/protections"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Privacy protections"
+      
+        track-name="privacy protections"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy protections"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy protections
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+    
+    
+<li class="devsite-nav-item">
+
+  
+  <a href="//privacysandbox.com/"
+    
+       class="devsite-nav-title gc-analytics-event "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Home"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Home
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+  
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Console</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/console/create-your-account"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/console/create-your-account"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/console/create-your-account"
+      ><span class="devsite-nav-text" tooltip>Create your account</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/console/add-users-to-account"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/console/add-users-to-account"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/console/add-users-to-account"
+      ><span class="devsite-nav-text" tooltip>Add users to your organization’s account</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Enrollment</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/enrollment"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/enrollment"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/enrollment"
+      ><span class="devsite-nav-text" tooltip>Enroll your platform with Privacy Sandbox</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/enrollment/faqs"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/enrollment/faqs"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/enrollment/faqs"
+      ><span class="devsite-nav-text" tooltip>Frequently asked questions</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Ads lifecycle</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/manage-ad-audience"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/manage-ad-audience"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/manage-ad-audience"
+      ><span class="devsite-nav-text" tooltip>Audiences</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/manage-ad-auctions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/manage-ad-auctions"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/manage-ad-auctions"
+      ><span class="devsite-nav-text" tooltip>Auctions</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/measure-ad-performance"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/measure-ad-performance"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/measure-ad-performance"
+      ><span class="devsite-nav-text" tooltip>Performance</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Topics</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/topics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/why-topics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/why-topics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/why-topics"
+      ><span class="devsite-nav-text" tooltip>Why do we need Topics</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Topics API for Web</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/topics/web"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/setup"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/setup"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/setup"
+      ><span class="devsite-nav-text" tooltip>Setup</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/implement"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/implement"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/implement"
+      ><span class="devsite-nav-text" tooltip>Implement Topics</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/test-and-go-live"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/test-and-go-live"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/test-and-go-live"
+      ><span class="devsite-nav-text" tooltip>Test &amp; go live</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/tooling"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/tooling"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/tooling"
+      ><span class="devsite-nav-text" tooltip>Tooling</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/controls"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/controls"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/controls"
+      ><span class="devsite-nav-text" tooltip>Customization &amp; opt-out</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/web/support"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/web/support"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/web/support"
+      ><span class="devsite-nav-text" tooltip>Support</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-experimental"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Topics API for Android</span><span class="devsite-nav-icon material-icons"
+        data-icon="experimental"
+        data-title="Experimental!"
+        aria-hidden="true"></span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/topics/android"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/android"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/android"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/android/implement"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/android/implement"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/android/implement"
+      ><span class="devsite-nav-text" tooltip>Implement Topics</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics/android/controls"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics/android/controls"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics/android/controls"
+      ><span class="devsite-nav-text" tooltip>Customization &amp; opt-out</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Protected Audience</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Web</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/feature-status"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/feature-status"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/feature-status"
+      ><span class="devsite-nav-text" tooltip>Status of pending API capabilities</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Developer guide</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/protected-audience-experiment"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/protected-audience-experiment"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/protected-audience-experiment"
+      ><span class="devsite-nav-text" tooltip>Experiment</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/ad-auction"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/ad-auction"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/ad-auction"
+      ><span class="devsite-nav-text" tooltip>Seller guide - Run ad auctions</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/reporting"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/reporting"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/reporting"
+      ><span class="devsite-nav-text" tooltip>Auction reporting</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/guide/reporting-id"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/guide/reporting-id"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/guide/reporting-id"
+      ><span class="devsite-nav-text" tooltip>Reporting IDs</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/latency"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/latency"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/latency"
+      ><span class="devsite-nav-text" tooltip>Improve auction latency</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/reports"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/reports"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/reports"
+      ><span class="devsite-nav-text" tooltip>Report on auction results</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sequential-auction-setup"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sequential-auction-setup"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sequential-auction-setup"
+      ><span class="devsite-nav-text" tooltip>Sequential auction setup with header bidding and multi-seller Protected Audience auction</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/troubleshoot"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/troubleshoot"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/troubleshoot"
+      ><span class="devsite-nav-text" tooltip>Troubleshoot</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/opt-out"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/opt-out"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/opt-out"
+      ><span class="devsite-nav-text" tooltip>Opt out</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/k-anonymity"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/k-anonymity"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/k-anonymity"
+      ><span class="devsite-nav-text" tooltip>K-anonymity</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/publisher-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/publisher-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/publisher-guide"
+      ><span class="devsite-nav-text" tooltip>Publisher guide</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/define-audience-data"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/define-audience-data"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/define-audience-data"
+      ><span class="devsite-nav-text" tooltip>Define audience data</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/update-audience-data"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/update-audience-data"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/update-audience-data"
+      ><span class="devsite-nav-text" tooltip>Update audience data and refresh ads</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/delegate-audience-management"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/delegate-audience-management"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/delegate-audience-management"
+      ><span class="devsite-nav-text" tooltip>Delegate audience management to a third-party</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/configure-auction"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/configure-auction"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/configure-auction"
+      ><span class="devsite-nav-text" tooltip>Set up an ad auction on the publisher&#39;s page</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/single-seller-auction"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/single-seller-auction"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/single-seller-auction"
+      ><span class="devsite-nav-text" tooltip>Run a browser based auction with a single seller</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/multi-seller-auction"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/multi-seller-auction"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/multi-seller-auction"
+      ><span class="devsite-nav-text" tooltip>Run a browser based auction with multiple sellers</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/sequential-auction"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/sequential-auction"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/sequential-auction"
+      ><span class="devsite-nav-text" tooltip>Sequential auction setup with contextual ad auction</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/render-ad"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/render-ad"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/render-ad"
+      ><span class="devsite-nav-text" tooltip>Render an ad</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/bid-in-auction-ad-slot"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/bid-in-auction-ad-slot"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/bid-in-auction-ad-slot"
+      ><span class="devsite-nav-text" tooltip>Bid in an auction to buy an ad slot</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://docs.google.com/document/d/1b6YlL5CFVfCo6hHMqfOYp2WJNdsBTSvM4eayrmbm7e4/view"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://docs.google.com/document/d/1b6YlL5CFVfCo6hHMqfOYp2WJNdsBTSvM4eayrmbm7e4/view"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://docs.google.com/document/d/1b6YlL5CFVfCo6hHMqfOYp2WJNdsBTSvM4eayrmbm7e4/view"
+      ><span class="devsite-nav-text" tooltip>API walkthrough</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/private-advertising/topics-in-audiences"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/topics-in-audiences"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/topics-in-audiences"
+      ><span class="devsite-nav-text" tooltip>Use Topics to target an audience</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Use cases</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience-api/use-case/deals"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience-api/use-case/deals"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience-api/use-case/deals"
+      ><span class="devsite-nav-text" tooltip>Deals</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/auction/pace-ad-delivery"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/auction/pace-ad-delivery"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/auction/pace-ad-delivery"
+      ><span class="devsite-nav-text" tooltip>Pace ad delivery by frequency</span></a></li></ul></div></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Android</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/mediation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/mediation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/mediation"
+      ><span class="devsite-nav-text" tooltip>Mediation</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/frequency-capping"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/frequency-capping"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/frequency-capping"
+      ><span class="devsite-nav-text" tooltip>Frequency capping</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/appinstall-filtering"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/appinstall-filtering"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/appinstall-filtering"
+      ><span class="devsite-nav-text" tooltip>App install ads filtering</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Developer guide</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide"
+      ><span class="devsite-nav-text" tooltip>Protected Audience developer guide</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/define-audience-data"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/define-audience-data"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/define-audience-data"
+      ><span class="devsite-nav-text" tooltip>Define audience data</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/update-audience-data"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/update-audience-data"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/update-audience-data"
+      ><span class="devsite-nav-text" tooltip>Update audience data and refresh ads</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/profiling"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/profiling"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/profiling"
+      ><span class="devsite-nav-text" tooltip>Profile a Protected Audience auction</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/debug-reporting"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/debug-reporting"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/debug-reporting"
+      ><span class="devsite-nav-text" tooltip>Debug reporting</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/inspect_audiences_cli"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/inspect_audiences_cli"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/inspect_audiences_cli"
+      ><span class="devsite-nav-text" tooltip>Inspect custom audiences on the command line</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/developer-guide/testing-setup"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/developer-guide/testing-setup"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/developer-guide/testing-setup"
+      ><span class="devsite-nav-text" tooltip>Testing setup</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/integration-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/integration-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/integration-guide"
+      ><span class="devsite-nav-text" tooltip>Integration guide</span></a></li><li class="devsite-nav-item"><a href="https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+      ><span class="devsite-nav-text" tooltip>API reference</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Protected App Signals</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/protected-app-signals"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/protected-app-signals"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/protected-app-signals"
+      ><span class="devsite-nav-text" tooltip>Overview for Android</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/protected-app-signals-developer-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/protected-app-signals-developer-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/protected-app-signals-developer-guide"
+      ><span class="devsite-nav-text" tooltip>Developer guide</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Bidding and Auction Services</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Web</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/bidding-and-auction-services/web/architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/bidding-and-auction-services/web/architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/bidding-and-auction-services/web/architecture"
+      ><span class="devsite-nav-text" tooltip>Architecture</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/bidding-and-auction-services/web/buyer-integration"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/bidding-and-auction-services/web/buyer-integration"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/bidding-and-auction-services/web/buyer-integration"
+      ><span class="devsite-nav-text" tooltip>Integrate with B&amp;A as a buyer</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/bidding-and-auction-services/web/seller-integration"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/bidding-and-auction-services/web/seller-integration"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/bidding-and-auction-services/web/seller-integration"
+      ><span class="devsite-nav-text" tooltip>Integrate with B&amp;A as a seller</span></a></li><li class="devsite-nav-item"><a href="/codelab/ba-services-local-testing"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /codelab/ba-services-local-testing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/codelab/ba-services-local-testing"
+      ><span class="devsite-nav-text" tooltip>Test B&amp;A for Web end-to-end locally</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Android</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/bidding-and-auction-services"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/bidding-and-auction-services"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/bidding-and-auction-services"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/protected-audience/android/bidding-and-auction-integration"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/protected-audience/android/bidding-and-auction-integration"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/protected-audience/android/bidding-and-auction-integration"
+      ><span class="devsite-nav-text" tooltip>Integration and optimization</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Fenced frames</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/fenced-frame"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/fenced-frame"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/fenced-frame"
+      ><span class="devsite-nav-text" tooltip>Overview for Web</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Attribution Reporting</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Web</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/web"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/web"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/web"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/attribution-reporting-updates"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/attribution-reporting-updates"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/attribution-reporting-updates"
+      ><span class="devsite-nav-text" tooltip>API updates</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/chrome-shipping"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/chrome-shipping"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/chrome-shipping"
+      ><span class="devsite-nav-text" tooltip>Why Chrome shipped the Attribution Reporting API</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/system-overview"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/system-overview"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/system-overview"
+      ><span class="devsite-nav-text" tooltip>System overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/summary-reports"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/summary-reports"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/summary-reports"
+      ><span class="devsite-nav-text" tooltip>Generate summary reports</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/report-schedules"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/report-schedules"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/report-schedules"
+      ><span class="devsite-nav-text" tooltip>Report schedules</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/constraints"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/constraints"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/constraints"
+      ><span class="devsite-nav-text" tooltip>Constraints</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Developer guide</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/dev-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/dev-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/dev-guide"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/getting-started"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/getting-started"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/getting-started"
+      ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/register-attribution-source"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/register-attribution-source"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/register-attribution-source"
+      ><span class="devsite-nav-text" tooltip>Register an attribution source</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/register-attribution-trigger"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/register-attribution-trigger"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/register-attribution-trigger"
+      ><span class="devsite-nav-text" tooltip>Register triggers</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/enable-conversion-measurement"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/enable-conversion-measurement"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/enable-conversion-measurement"
+      ><span class="devsite-nav-text" tooltip>Enable conversion measurement</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/change-attribution-logic"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/change-attribution-logic"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/change-attribution-logic"
+      ><span class="devsite-nav-text" tooltip>Change attribution logic</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/define-filters"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/define-filters"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/define-filters"
+      ><span class="devsite-nav-text" tooltip>Define filters</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/define-attribution-scopes"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/define-attribution-scopes"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/define-attribution-scopes"
+      ><span class="devsite-nav-text" tooltip>Define attribution scopes</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/prevent-duplication"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/prevent-duplication"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/prevent-duplication"
+      ><span class="devsite-nav-text" tooltip>Prevent duplication</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/custom-report-windows"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/custom-report-windows"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/custom-report-windows"
+      ><span class="devsite-nav-text" tooltip>Custom report windows</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/attribution-reporting-debugging"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/attribution-reporting-debugging"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/attribution-reporting-debugging"
+      ><span class="devsite-nav-text" tooltip>Introduction to debug reports</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/attribution-reporting-debugging/part-2"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2"
+      ><span class="devsite-nav-text" tooltip>Set up debug reports</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/attribution-reporting-debugging/part-3"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3"
+      ><span class="devsite-nav-text" tooltip>Debugging cookbook</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/summary-reports-intro"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/summary-reports-intro"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/summary-reports-intro"
+      ><span class="devsite-nav-text" tooltip>Introduction to summary reports</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/contribution-budget"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/contribution-budget"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/contribution-budget"
+      ><span class="devsite-nav-text" tooltip>Contribution budget</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/aggregation-keys"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/aggregation-keys"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/aggregation-keys"
+      ><span class="devsite-nav-text" tooltip>Aggregation keys</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/understanding-noise"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/understanding-noise"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/understanding-noise"
+      ><span class="devsite-nav-text" tooltip>Understand noise</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/working-with-noise"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/working-with-noise"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/working-with-noise"
+      ><span class="devsite-nav-text" tooltip>Work with noise</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/design-decisions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/design-decisions"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/design-decisions"
+      ><span class="devsite-nav-text" tooltip>Noiselab</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/measurement-implementation-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/measurement-implementation-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/measurement-implementation-guide"
+      ><span class="devsite-nav-text" tooltip>Measurement implementation guide</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/measurement-testing-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/measurement-testing-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/measurement-testing-guide"
+      ><span class="devsite-nav-text" tooltip>Measurement testing guide</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/attribution-reporting-data-clearing"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/attribution-reporting-data-clearing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/attribution-reporting-data-clearing"
+      ><span class="devsite-nav-text" tooltip>Data clearing</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/cross-web-app"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/cross-web-app"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/cross-web-app"
+      ><span class="devsite-nav-text" tooltip>Cross app and web measurement</span></a></li></ul></div></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Android</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android/attribution-app-to-web"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android/attribution-app-to-web"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android/attribution-app-to-web"
+      ><span class="devsite-nav-text" tooltip>Cross app and web measurement</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android/simulation-library"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android/simulation-library"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android/simulation-library"
+      ><span class="devsite-nav-text" tooltip>Measurement Simulation Library</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Developer guide</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android/developer-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android/developer-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android/developer-guide"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/cross-web-app"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/cross-web-app"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/cross-web-app"
+      ><span class="devsite-nav-text" tooltip>Cross app and web measurement</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android/xna-examples"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android/xna-examples"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android/xna-examples"
+      ><span class="devsite-nav-text" tooltip>Cross-network attribution examples</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/attribution-reporting/android/integration-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/attribution-reporting/android/integration-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/attribution-reporting/android/integration-guide"
+      ><span class="devsite-nav-text" tooltip>Integration guide</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://developer.android.com/design-for-safety/privacy-sandbox/reference/packages"
+      ><span class="devsite-nav-text" tooltip>API reference</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Private Aggregation</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/overview"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/overview"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/overview"
+      ><span class="devsite-nav-text" tooltip>API introduction</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/fundamentals"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/fundamentals"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/fundamentals"
+      ><span class="devsite-nav-text" tooltip>Fundamentals</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/private-aggregation-experiment"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/private-aggregation-experiment"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/private-aggregation-experiment"
+      ><span class="devsite-nav-text" tooltip>Experiment</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Use cases</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/unique-reach"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/unique-reach"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/unique-reach"
+      ><span class="devsite-nav-text" tooltip>Measure unique reach</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/k-freq-reach"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/k-freq-reach"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/k-freq-reach"
+      ><span class="devsite-nav-text" tooltip>Measure K+ frequency reach</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/user-demographics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/user-demographics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/user-demographics"
+      ><span class="devsite-nav-text" tooltip>Measure user demographic</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/private-aggregation/multi-touch-attribution"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/private-aggregation/multi-touch-attribution"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/private-aggregation/multi-touch-attribution"
+      ><span class="devsite-nav-text" tooltip>Multi-touch attribution</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Aggregation Service</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/why-ags"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/why-ags"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/why-ags"
+      ><span class="devsite-nav-text" tooltip>Why Aggregation Service</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/how-it-works"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/how-it-works"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/how-it-works"
+      ><span class="devsite-nav-text" tooltip>How it works</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/setup"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/setup"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/setup"
+      ><span class="devsite-nav-text" tooltip>Setup</span></a></li><li class="devsite-nav-item"><a href="https://github.com/privacysandbox/aggregation-service/blob/main/docs/local-testing-tool.md"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://github.com/privacysandbox/aggregation-service/blob/main/docs/local-testing-tool.md"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://github.com/privacysandbox/aggregation-service/blob/main/docs/local-testing-tool.md"
+      ><span class="devsite-nav-text" tooltip>Test locally</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Implement</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/privacy-protection-report-strategy"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/privacy-protection-report-strategy"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/privacy-protection-report-strategy"
+      ><span class="devsite-nav-text" tooltip>Set privacy protections</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/developer-guides/filtering-ids"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/developer-guides/filtering-ids"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/developer-guides/filtering-ids"
+      ><span class="devsite-nav-text" tooltip>Filter your results</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/batch-strategies"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/batch-strategies"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/batch-strategies"
+      ><span class="devsite-nav-text" tooltip>Batch your reports</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/understand-ags-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/understand-ags-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/understand-ags-api"
+      ><span class="devsite-nav-text" tooltip>Deploy and manage requests</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/load-testing-framework"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/load-testing-framework"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/load-testing-framework"
+      ><span class="devsite-nav-text" tooltip>Run load testing</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/receive-store-aggregatable-reports"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/receive-store-aggregatable-reports"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/receive-store-aggregatable-reports"
+      ><span class="devsite-nav-text" tooltip>Receive &amp; store aggregatable reports</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Troubleshoot</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/troubleshooting"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/troubleshooting"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/troubleshooting"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/troubleshooting/diagnose-environment"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/troubleshooting/diagnose-environment"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/troubleshooting/diagnose-environment"
+      ><span class="devsite-nav-text" tooltip>Diagnose your new or upgraded environment</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/troubleshooting/diagnose-infrastructure"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/troubleshooting/diagnose-infrastructure"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/troubleshooting/diagnose-infrastructure"
+      ><span class="devsite-nav-text" tooltip>Diagnose your cloud infrastructure</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/troubleshooting/diagnose-jobs"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/troubleshooting/diagnose-jobs"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/troubleshooting/diagnose-jobs"
+      ><span class="devsite-nav-text" tooltip>Diagnose your aggregation jobs</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/aggregation-service/troubleshooting/debug-privacy-budget-exhausted"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/aggregation-service/troubleshooting/debug-privacy-budget-exhausted"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/aggregation-service/troubleshooting/debug-privacy-budget-exhausted"
+      ><span class="devsite-nav-text" tooltip>Debug Privacy Exhausted Error</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Select URL</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/select-url"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/select-url"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/select-url"
+      ><span class="devsite-nav-text" tooltip>Overview for Web</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/select-url/creative-rotation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/select-url/creative-rotation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/select-url/creative-rotation"
+      ><span class="devsite-nav-text" tooltip>Rotate ad creatives</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/select-url/creative-selection-by-frequency"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/select-url/creative-selection-by-frequency"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/select-url/creative-selection-by-frequency"
+      ><span class="devsite-nav-text" tooltip>Select ad creative by frequency</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/select-url/ab-testing"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/select-url/ab-testing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/select-url/ab-testing"
+      ><span class="devsite-nav-text" tooltip>Run A/B testing</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/select-url/known-customer"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/select-url/known-customer"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/select-url/known-customer"
+      ><span class="devsite-nav-text" tooltip>Customize experience for known customers</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Shared Storage</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/shared-storage"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/shared-storage"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/shared-storage"
+      ><span class="devsite-nav-text" tooltip>Overview for Web</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/shared-storage/api-walkthrough"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/shared-storage/api-walkthrough"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/shared-storage/api-walkthrough"
+      ><span class="devsite-nav-text" tooltip>API walkthrough</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/shared-storage/try-the-demo"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/shared-storage/try-the-demo"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/shared-storage/try-the-demo"
+      ><span class="devsite-nav-text" tooltip>Try the demo</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/shared-storage/debugging"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/shared-storage/debugging"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/shared-storage/debugging"
+      ><span class="devsite-nav-text" tooltip>Debugging</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>SDK Runtime</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/architecture"
+      ><span class="devsite-nav-text" tooltip>Architecture</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/ui-presentation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/ui-presentation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/ui-presentation"
+      ><span class="devsite-nav-text" tooltip>UI presentation APIs</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/viewability"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/viewability"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/viewability"
+      ><span class="devsite-nav-text" tooltip>Viewability</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/backward-compatibility"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/backward-compatibility"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/backward-compatibility"
+      ><span class="devsite-nav-text" tooltip>Backward compatibility</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/full-screen-ads"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/full-screen-ads"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/full-screen-ads"
+      ><span class="devsite-nav-text" tooltip>Full-screen ads</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/native-ads"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/native-ads"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/native-ads"
+      ><span class="devsite-nav-text" tooltip>Native ads</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/mediation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/mediation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/mediation"
+      ><span class="devsite-nav-text" tooltip>Mediation</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Developer guide</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide/key-concepts"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide/key-concepts"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide/key-concepts"
+      ><span class="devsite-nav-text" tooltip>Key concepts</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide/dev-environment"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide/dev-environment"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide/dev-environment"
+      ><span class="devsite-nav-text" tooltip>Set up your developer environment</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide/build-re-sdk"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide/build-re-sdk"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide/build-re-sdk"
+      ><span class="devsite-nav-text" tooltip>Build a Runtime-Enabled SDK</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide/consume-re-sdk"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide/consume-re-sdk"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide/consume-re-sdk"
+      ><span class="devsite-nav-text" tooltip>Consume the Runtime-Enabled SDK</span></a></li><li class="devsite-nav-item"><a href="/private-advertising/sdk-runtime/developer-guide/build-test"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /private-advertising/sdk-runtime/developer-guide/build-test"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/private-advertising/sdk-runtime/developer-guide/build-test"
+      ><span class="devsite-nav-text" tooltip>Build and test</span></a></li></ul></div></li></ul></div></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  disabled></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /phaseout/deprecated.css */
+.devsite-article section {
+  background-image: url(/phaseout/deprecated.png);
+}
+
+      </style>
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent"
+      
+        
+    background="google-red"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <b>Some Privacy Sandbox technologies are being phased out.</b> <br><br>See our <a href="https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/">Update on Plans for Privacy Sandbox Technologies</a>. <br><br><a href="/overview/status">Privacy Sandbox feature status</a> provides more information about the status of individual APIs and platform features.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://privacysandbox.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Privacy Sandbox"
+      
+    >
+    
+          Privacy Sandbox
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://privacysandbox.google.com/private-advertising/console/create-your-account"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Private advertising
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Privacy Sandbox"
+  product-id="5335444"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20260310-r00-rc00.476021692791623284"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  
+    disable-product-feedback
+  
+  
+  
+    
+      project-icon="https://privacysandbox.google.com/static/privacy-sandbox-logo.svg"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  <devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip></devsite-actions>
+  
+    
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    disabled>
+  </devsite-toc>
+  
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-75 devsite-landing-row-hero devsite-landing-row-no-image-background"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <picture>
+    
+    <img alt=""
+         
+         src="https://privacysandbox.google.com/static/overview/image/goals.png"
+         srcset="https://privacysandbox.google.com/static/overview/image/goals_36.png 36w,https://privacysandbox.google.com/static/overview/image/goals_48.png 48w,https://privacysandbox.google.com/static/overview/image/goals_72.png 72w,https://privacysandbox.google.com/static/overview/image/goals_96.png 96w,https://privacysandbox.google.com/static/overview/image/goals_480.png 480w,https://privacysandbox.google.com/static/overview/image/goals_720.png 720w,https://privacysandbox.google.com/static/overview/image/goals_856.png 856w,https://privacysandbox.google.com/static/overview/image/goals_960.png 960w,https://privacysandbox.google.com/static/overview/image/goals_1440.png 1440w,https://privacysandbox.google.com/static/overview/image/goals_1920.png 1920w,https://privacysandbox.google.com/static/overview/image/goals_2880.png 2880w"
+         
+         
+         sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 342px"
+         
+         
+         fetchpriority="high">
+  </picture>
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="topics-api"
+        data-text="Topics API"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Topics API
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Improve ad relevance without compromising user privacy. Get started on building your ad solution with the Topics API, a mechanism designed to allow for interest-based advertising. With Topics, the specific sites a user has visited are not shared across the web.
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-header-centered devsite-landing-row-cards"
+           
+    background="grey"
+  
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="enable-interest-based-advertising"
+        data-text="Enable interest-based advertising"
+        
+        tabindex="0">
+      
+    
+        Enable interest-based advertising
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/why-topics">
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://privacysandbox.google.com/static/overview/image/checkbox.png"
+           srcset="https://privacysandbox.google.com/static/overview/image/checkbox_36.png 36w,https://privacysandbox.google.com/static/overview/image/checkbox_48.png 48w,https://privacysandbox.google.com/static/overview/image/checkbox_72.png 72w,https://privacysandbox.google.com/static/overview/image/checkbox_96.png 96w,https://privacysandbox.google.com/static/overview/image/checkbox_480.png 480w,https://privacysandbox.google.com/static/overview/image/checkbox_720.png 720w,https://privacysandbox.google.com/static/overview/image/checkbox_856.png 856w,https://privacysandbox.google.com/static/overview/image/checkbox_960.png 960w,https://privacysandbox.google.com/static/overview/image/checkbox_1440.png 1440w,https://privacysandbox.google.com/static/overview/image/checkbox_1920.png 1920w,https://privacysandbox.google.com/static/overview/image/checkbox_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="learn-more-about-iba"
+        data-text="Learn more about IBA"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://privacysandbox.google.com/private-advertising/topics/why-topics">
+    
+        Learn more about IBA
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Use Topics to display ads users will like with interest-based advertising (IBA).
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/why-topics#how_topics_api_reduces_fingerprinting">
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://privacysandbox.google.com/static/overview/image/padlock-locked.png"
+           srcset="https://privacysandbox.google.com/static/overview/image/padlock-locked_36.png 36w,https://privacysandbox.google.com/static/overview/image/padlock-locked_48.png 48w,https://privacysandbox.google.com/static/overview/image/padlock-locked_72.png 72w,https://privacysandbox.google.com/static/overview/image/padlock-locked_96.png 96w,https://privacysandbox.google.com/static/overview/image/padlock-locked_480.png 480w,https://privacysandbox.google.com/static/overview/image/padlock-locked_720.png 720w,https://privacysandbox.google.com/static/overview/image/padlock-locked_856.png 856w,https://privacysandbox.google.com/static/overview/image/padlock-locked_960.png 960w,https://privacysandbox.google.com/static/overview/image/padlock-locked_1440.png 1440w,https://privacysandbox.google.com/static/overview/image/padlock-locked_1920.png 1920w,https://privacysandbox.google.com/static/overview/image/padlock-locked_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="protect-user-privacy"
+        data-text="Protect user privacy"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://privacysandbox.google.com/private-advertising/topics/why-topics#how_topics_api_reduces_fingerprinting">
+    
+        Protect user privacy
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Use Topics to ensure that users aren't re-identified across sites and apps using fingerprinting.
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-no-image-background devsite-landing-row-header-centered"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="get-started-with-topics-api"
+        data-text="Get started with Topics API"
+        
+        tabindex="0">
+      
+    
+        Get started with Topics API
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://privacysandbox.google.com/static/private-advertising/topics/icon-web.png"
+           srcset="https://privacysandbox.google.com/static/private-advertising/topics/icon-web_36.png 36w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_48.png 48w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_72.png 72w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_96.png 96w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_480.png 480w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_720.png 720w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_856.png 856w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_960.png 960w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_1440.png 1440w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_1920.png 1920w,https://privacysandbox.google.com/static/private-advertising/topics/icon-web_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="topics-on-web"
+        data-text="Topics on Web"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Topics on Web
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Integrate Topics API into your web application.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/web"
+  
+    class="button
+      "
+    
+    
+    >Learn more</a>
+
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/web/developer-guide"
+  
+    class="button
+      "
+    
+    
+    >Implement</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-landing-row-item-icon"
+           alt=""
+           src="https://privacysandbox.google.com/static/private-advertising/topics/icon-android.png"
+           srcset="https://privacysandbox.google.com/static/private-advertising/topics/icon-android_36.png 36w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_48.png 48w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_72.png 72w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_96.png 96w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_480.png 480w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_720.png 720w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_856.png 856w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_960.png 960w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_1440.png 1440w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_1920.png 1920w,https://privacysandbox.google.com/static/private-advertising/topics/icon-android_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="topics-on-android"
+        data-text="Topics on Android"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Topics on Android
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Integrate Topics API into your mobile app.
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/android"
+  
+    class="button
+      "
+    
+    
+    >Learn more</a>
+
+  
+  <a href="https://privacysandbox.google.com/private-advertising/topics/android/developer-guide"
+  
+    class="button
+      "
+    
+    
+    >Implement</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-header-centered"
+           
+    background="grey"
+  
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id="engage-and-share-feedback"
+        data-text="Engage and share feedback"
+        
+        tabindex="0">
+      
+    
+        Engage and share feedback
+      
+  
+    </h2>
+  
+
+          
+            <div class="devsite-landing-row-description">
+              Your feedback is key to improving the Topics API. By sharing your insights, you contribute to the development of a privacy-respecting approach to interest-based advertising.
+
+            </div>
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+      
+
+      
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-column">
+            
+    <h2 id="web"
+        data-text="Web"
+        
+        tabindex="0">
+      
+    
+        Web
+      
+  
+    </h2>
+  
+            
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="small"
+  >
+  
+    <div class="devsite-landing-row-item-icon material-icons" aria-hidden="true">
+      bug_report
+    </div>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="developer-support"
+        data-text="Developer support"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Developer support
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <a href="https://bugs.chromium.org/p/chromium/issues/list?q=topics">File a Chromium bug</a> to ask questions about the implementation currently available in Chrome.
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="small"
+  >
+  
+    <div class="devsite-landing-row-item-icon material-icons" aria-hidden="true">
+      code
+    </div>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="github"
+        data-text="GitHub"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        GitHub
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Read the Topics API <a href="https://github.com/jkarlin/topics">explainer</a>, and <a href="https://github.com/jkarlin/topics/issues">raise questions and follow discussion</a> about the design of the Topics API.
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="small"
+  >
+  
+    <div class="devsite-landing-row-item-icon material-icons" aria-hidden="true">
+      dvr
+    </div>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="w3c"
+        data-text="W3C"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        W3C
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            Read <a href="https://patcg-individual-drafts.github.io/topics/">spec</a>; discuss industry use cases in the <a href="https://www.w3.org/community/web-adv/participants">Improving Web Advertising Business Group</a>
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+          </div>
+        
+          <div class="devsite-landing-row-column">
+            
+    <h2 id="android"
+        data-text="Android"
+        
+        tabindex="0">
+      
+    
+        Android
+      
+  
+    </h2>
+  
+            
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="small"
+  >
+  
+    <div class="devsite-landing-row-item-icon material-icons" aria-hidden="true">
+      bug_report
+    </div>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="developer-support"
+        data-text="Developer support"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Developer support
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <a href="https://issuetracker.google.com/issues/new?component=1116743&template=1636967&pli=1">File a bug</a> to ask questions or provide feedback.
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         
+    icon-position="left"
+  >
+
+      
+  
+    
+  <div class="devsite-landing-row-item-icon-container"
+       
+       
+       
+    size="small"
+  >
+  
+    <div class="devsite-landing-row-item-icon material-icons" aria-hidden="true">
+      campaign
+    </div>
+  
+  </div>
+  
+  
+
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="announcements"
+        data-text="Announcements"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Announcements
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <a href="https://services.google.com/fb/forms/privacysandbox/">Sign up</a> to receive regular updates and provide feedback on the new privacy solutions proposed by Android.
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+          </div>
+        
+        </div>
+
+      
+      
+
+    
+    </div>
+  </section>
+
+  
+
+  
+    <devsite-hats-survey class="nocontent"
+      hats-id="m3gEAgE90JYWReCDCni90QnmR6N2"
+      listnr-id="Ph3Z2hnd9ArPaNcf6mtxnV"></devsite-hats-survey>
+  
+</div>
+
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2025-12-18 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Privacy Sandbox"
+  product-id="5335444"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20260310-r00-rc00.476021692791623284"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  
+    disable-product-feedback
+  
+  
+  
+    
+      project-icon="https://privacysandbox.google.com/static/privacy-sandbox-logo.svg"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-12-18 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Updates</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/blog"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Developer blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://privacysandbox.com/news/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Project news
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Resources</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://privacysandbox.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+              
+              
+            
+          
+            Project site
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Tools</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://goo.gle/psat"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Privacy Sandbox Analysis Tool
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://privacy-sandbox-demos.dev/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Privacy Sandbox demos
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;False&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-4GR80KWYRS&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-4GR80KWYRS&#34;, &#34;purpose&#34;: 0}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-WPJH8HP6&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;landing&#34;, &#34;projectName&#34;: &#34;Privacy Sandbox&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;privacysandbox&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="RgHHUv9YyXQ7B0uwsFnqGK0R+D/QEI">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/js/app_loader.js', '[64,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox","https://privacysandbox-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/privacysandbox/manifest.json","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/va845a6a69ec71f6762e80b2da8e8faa65e74307aa7e53d6c2485adee73edb48b/privacysandbox/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","privacysandbox.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Profiles__enable_purchase_prompts","Profiles__enable_public_developer_profiles","DevPro__enable_embed_profile_creation","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_callout_notifications","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__enable_explicit_template_dependencies","Cloud__fast_free_trial","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_join_program_group_endpoint","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Cloud__enable_cloud_shell_fte_user_flow","Search__enable_suggestions_from_borg","DevPro__enable_enterprise","DevPro__enable_firebase_workspaces_card","Profiles__enable_release_notes_notifications","Cloud__enable_free_trial_server_call","Search__enable_ai_search_summaries_for_all","Profiles__enable_completecodelab_endpoint","CloudShell__cloud_code_overflow_menu","DevPro__enable_free_benefits","Profiles__enable_auto_apply_credits","Profiles__require_profile_eligibility_for_signin","Profiles__enable_developer_profile_benefits_ui_redesign","MiscFeatureFlags__enable_variable_operator","Analytics__enable_devpro_interaction_logging","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__enable_appearance_cookies","MiscFeatureFlags__remove_cross_domain_tracking_params","MiscFeatureFlags__fix_lower_breadcrumbs","Profiles__enable_completequiz_endpoint","MiscFeatureFlags__enable_variable_operator_index_yaml","Profiles__enable_user_type","Profiles__enable_profile_collections","Cloud__enable_legacy_calculator_redirect","DevPro__enable_developer_subscriptions","Profiles__enable_dashboard_curated_recommendations","Cloud__enable_cloud_shell","DevPro__enable_g1_integration","Profiles__enable_stripe_subscription_management","DevPro__enable_cloud_innovators_plus","Concierge__enable_pushui","MiscFeatureFlags__emergency_css","MiscFeatureFlags__enable_explain_this_code","DevPro__enable_payments_first_batch","Search__enable_page_map","DevPro__enable_devpro_offers","Cloud__enable_cloud_dlp_service","MiscFeatureFlags__developers_footer_dark_image","DevPro__enable_code_assist","DevPro__enable_vertex_credit_card","Profiles__enable_targeted_hero","BookNav__enable_tenant_cache_key","Profiles__enable_developer_profile_pages_as_content","Cloud__enable_cloudx_experiment_ids","Analytics__enable_clearcut_logging","Cloud__cache_serialized_dynamic_content","Profiles__enable_awarding_url","Concierge__enable_remove_info_panel_tags","DevPro__enable_google_payments_buyflow","Profiles__enable_developer_profiles_callout","Profiles__enable_recognition_badges","Profiles__enable_complete_playlist_endpoint","MiscFeatureFlags__enable_framebox_badge_methods","DevPro__enable_google_one_card","Search__enable_dynamic_content_confidential_banner","TpcFeatures__proxy_prod_host","DevPro__enable_nvidia_credits_card","CloudShell__cloud_shell_button","Experiments__reqs_query_experiments","Search__enable_ai_eligibility_checks","MiscFeatureFlags__developers_footer_image","Cloud__enable_llm_concierge_chat","SignIn__enable_l1_signup_flow","Profiles__enable_playlist_community_acl","Profiles__enable_page_saving","Concierge__enable_actions_menu","MiscFeatureFlags__enable_view_transitions","OnSwitch__enable","DevPro__remove_eu_tax_intake_form"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,null,null,"https://developerprofiles-pa.clients6.google.com",[64,"privacysandbox","Privacy Sandbox","privacysandbox.google.com",null,"privacysandbox-dot-devsite-v2-prod.appspot.com",null,null,[null,1,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1,null,1],null,null,null,null,null,null,[1]],null,[77,null,null,null,null,null,"/images/lockup.svg","/images/privacy-sandbox-logo.svg",null,null,null,1,null,null,null,null,null,null,null,null,null,2],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[[],[1,1]],[[null,null,null,null,null,null,null,[["G-4GR80KWYRS"],null,null,[["G-4GR80KWYRS",1]]]]]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,1,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",null,null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
