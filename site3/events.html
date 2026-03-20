@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events — Dane Lloyd MP, Parkland Alberta</title>
+    <meta name="description" content="Community events, festivals, and meetings across Parkland riding — Spring & Summer 2026. Spruce Grove, Stony Plain, Drayton Valley, Evansburg, Wildwood and more.">
+    <link rel="icon" href="../images/yootheme/icons/96x96-favicon.png" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navy:   { DEFAULT: '#003F72', dark: '#0a2540', light: '#0d5a9e', xdark: '#061828' },
+                    accent: { DEFAULT: '#1e87f0', warm: '#f59e0b' },
+                    lime:   '#A9F828',
+                },
+                fontFamily: {
+                    sans:    ['Inter', 'system-ui', 'sans-serif'],
+                    display: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+                },
+            }
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        .nav-glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.88); border-bottom: 1px solid rgba(0,63,114,0.06); }
+        .nav-solid { background: rgba(10,37,64,0.97); backdrop-filter: blur(20px); }
+        .hero-grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.04; }
+        .reveal { opacity:0; transform:translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .reveal.in { opacity:1; transform:translateY(0); }
+        .d-100 { transition-delay: 0.08s; }
+        .d-200 { transition-delay: 0.16s; }
+        .d-300 { transition-delay: 0.24s; }
+        .d-400 { transition-delay: 0.32s; }
+        .d-500 { transition-delay: 0.40s; }
+        .cta-bg { background: linear-gradient(135deg, #061828 0%, #003F72 60%, #0d5a9e 100%); }
+        #chatPanel { display:none; }
+        #chatPanel.open { display:flex; }
+        #mobileMenu { transition: max-height 0.35s ease, opacity 0.35s ease; max-height:0; opacity:0; overflow:hidden; }
+        #mobileMenu.open { max-height:500px; opacity:1; }
+        .accent-line { width:3rem; height:3px; background: linear-gradient(90deg, #1e87f0, #A9F828); border-radius:9999px; }
+
+        /* Event card */
+        .event-card { border:1px solid rgba(0,63,114,0.09); transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s; }
+        .event-card:hover { border-color: rgba(0,63,114,0.22); box-shadow: 0 10px 36px rgba(0,63,114,0.1); transform: translateY(-3px); }
+
+        /* Month header */
+        .month-header { position: relative; }
+        .month-header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background: linear-gradient(90deg, #1e87f0, #A9F828, transparent); border-radius:9999px; }
+
+        /* Filter button */
+        .filter-btn { border:1px solid rgba(0,63,114,0.15); transition: all 0.2s; }
+        .filter-btn.active, .filter-btn:hover { background:#003F72; color:#fff; border-color:#003F72; }
+
+        /* Date badge colours by month */
+        .badge-apr { background:#dbeafe; color:#1d4ed8; }
+        .badge-may { background:#d1fae5; color:#065f46; }
+        .badge-jun { background:#fef9c3; color:#854d0e; }
+        .badge-jul { background:#ffe4e6; color:#9f1239; }
+        .badge-aug { background:#f3e8ff; color:#6b21a8; }
+        .badge-sep { background:#ffedd5; color:#9a3412; }
+
+        /* Org card */
+        .org-card { border-left: 3px solid #1e87f0; }
+
+        @keyframes slideUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+        .hero-badge { animation: slideUp 0.7s 0.3s both; }
+        .hero-title  { animation: slideUp 0.8s 0.5s both; }
+        .hero-sub    { animation: slideUp 0.8s 0.7s both; }
+        .hero-btns   { animation: slideUp 0.8s 0.9s both; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 nav-solid">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="flex items-center justify-between h-[72px]">
+            <a href="index.html" class="flex-shrink-0 transition-opacity hover:opacity-80">
+                <img id="navLogo" src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-9">
+            </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Home</a>
+                <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">About Dane</a>
+                <a href="community-news.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Community News</a>
+                <a href="events.html" class="nav-link relative px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors hover:bg-white/10">Events
+                    <span class="absolute bottom-1.5 left-4 right-4 h-0.5 bg-accent rounded-full"></span>
+                </a>
+                <a href="media.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Media</a>
+                <a href="stay-informed.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Stay Informed</a>
+                <a href="contact.html" class="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy shadow-md hover:bg-blue-50 transition-all hover:-translate-y-px">
+                    Contact Dane
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-navy-xdark/98 backdrop-blur-xl">
+        <div class="px-5 py-4 space-y-1">
+            <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Home</a>
+            <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">About Dane</a>
+            <a href="community-news.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Community News</a>
+            <a href="events.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-white bg-white/10">Events</a>
+            <a href="media.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Media</a>
+            <a href="stay-informed.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Stay Informed</a>
+            <a href="contact.html" class="block mt-2 px-4 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white text-center">Contact Dane</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="relative overflow-hidden pt-[72px]" style="background:#0a1f35">
+    <img src="../templates/yootheme/cache/fe/field-of-rapeseeds-oilseed-rape-blutenmeer-yellow-46164-fee7bd52.jpeg"
+         alt="Parkland riding" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.45">
+    <div class="absolute inset-0 hero-grain pointer-events-none"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(6,24,40,0.75) 0%,rgba(0,63,114,0.45) 60%,transparent 100%)"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 md:py-32">
+        <div class="max-w-2xl">
+            <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/90 text-sm font-medium mb-6">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-lime"></span>
+                </span>
+                Spring &amp; Summer 2026 · Parkland Riding
+            </div>
+            <h1 class="hero-title font-display text-5xl sm:text-6xl font-black text-white leading-tight tracking-tight uppercase mb-5">Community<br><span class="text-accent">Events</span></h1>
+            <p class="hero-sub text-lg text-blue-200/80 leading-relaxed max-w-xl">Festivals, fundraisers, fairs, and community gatherings across all 18 communities of Parkland riding. Dane looks forward to seeing you out there.</p>
+            <div class="hero-btns mt-8 flex flex-wrap gap-4">
+                <a href="#events-list" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-lime text-navy-xdark font-bold text-sm shadow-lg hover:-translate-y-px hover:shadow-xl transition-all">
+                    View All Events
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Stats bar -->
+    <div class="relative z-10 border-t border-white/10 bg-navy-xdark/60 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-5 grid grid-cols-3 gap-6 text-center">
+            <div>
+                <div class="text-2xl font-extrabold text-white">24</div>
+                <div class="text-xs text-blue-300/70 mt-0.5 uppercase tracking-widest">Events Listed</div>
+            </div>
+            <div class="border-x border-white/10">
+                <div class="text-2xl font-extrabold text-white">6</div>
+                <div class="text-xs text-blue-300/70 mt-0.5 uppercase tracking-widest">Months of Activity</div>
+            </div>
+            <div>
+                <div class="text-2xl font-extrabold text-white">18</div>
+                <div class="text-xs text-blue-300/70 mt-0.5 uppercase tracking-widest">Communities</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FILTER BAR -->
+<div class="sticky top-[72px] z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-3 flex items-center gap-2 overflow-x-auto scrollbar-hide">
+        <span class="text-xs font-semibold text-gray-400 uppercase tracking-widest mr-2 flex-shrink-0">Filter:</span>
+        <button onclick="filterEvents('all')" class="filter-btn active flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="all">All Events</button>
+        <button onclick="filterEvents('april')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="april">April</button>
+        <button onclick="filterEvents('may')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="may">May</button>
+        <button onclick="filterEvents('june')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="june">June</button>
+        <button onclick="filterEvents('july')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="july">July</button>
+        <button onclick="filterEvents('august')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="august">August</button>
+        <button onclick="filterEvents('september')" class="filter-btn flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium" data-filter="september">September</button>
+        <div class="flex-1"></div>
+        <a href="mailto:dane.lloyd@parl.gc.ca?subject=Event%20Invitation%20%E2%80%94%20Parkland%20Riding" class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-navy text-white text-xs font-semibold hover:bg-navy-dark transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            Suggest an Event
+        </a>
+    </div>
+</div>
+
+
+<!-- EVENTS LIST -->
+<section id="events-list" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <!-- ── APRIL ── -->
+        <div class="month-group mb-16" data-month="april">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-apr flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">APR</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">April 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">3 events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="reveal event-card bg-white rounded-2xl p-6" data-month="april">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-apr text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            April 11
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Spruce Grove</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Spruce Grove Curling Club Year End Banquet</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual year-end celebration for the Spruce Grove Curling Club — a great opportunity to connect with the community.</p>
+                </div>
+
+                <div class="reveal d-100 event-card bg-white rounded-2xl p-6" data-month="april">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-apr text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            April 11
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Opportunity Home "Spring Shaker" Fundraiser</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Fundraiser in support of Opportunity Home's men's rehabilitation centre — a facility Dane toured during the 2025 election campaign.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        Community Fundraiser
+                    </div>
+                </div>
+
+                <div class="reveal d-200 event-card bg-white rounded-2xl p-6" data-month="april">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-apr text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            April 20
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Riding-Wide</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Tri Region Prayer Breakfast</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual interfaith prayer breakfast bringing together community and faith leaders from across the Tri Region.</p>
+                </div>
+
+                <div class="reveal d-300 event-card bg-white rounded-2xl p-6 md:col-span-2 lg:col-span-3" data-month="april">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="flex items-center gap-3 flex-shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-apr text-xs font-bold">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                April 23–26
+                            </span>
+                            <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Spruce Grove</span>
+                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lime/20 text-green-700 text-xs font-semibold">Multi-Day</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-navy-dark text-base mb-1 leading-snug">Spruce Grove Ag Society Spring Carnival</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Four days of family fun at the Spruce Grove Ag Society's Spring Carnival — rides, games, food, and community spirit.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── MAY ── -->
+        <div class="month-group mb-16" data-month="may">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-may flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">MAY</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">May 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">1 event</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="reveal event-card bg-white rounded-2xl p-6" data-month="may">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-may text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            May 9
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Wildwood</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Community Garage Sale</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Hosted by the Wildwood Ag Society — a beloved annual tradition bringing the whole community together for a day of deals and good company.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── JUNE ── -->
+        <div class="month-group mb-16" data-month="june">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-jun flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">JUN</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">June 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">9 events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="reveal event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 5
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Evansburg</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Evansburg Senior Citizens' Society 50th Anniversary</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A milestone celebration for the Evansburg Senior Citizens' Society — 50 years of service and community connection.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-purple-600 font-semibold bg-purple-50 px-2.5 py-1 rounded-full">
+                        🎉 50th Anniversary
+                    </div>
+                </div>
+
+                <div class="reveal d-100 event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 5–7
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Stony Plain</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Farmer's Days</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">One of Stony Plain's most beloved annual traditions — three days of agricultural celebration, entertainment, and community pride.</p>
+                    <div class="mt-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lime/20 text-green-700 text-xs font-semibold">Multi-Day</div>
+                </div>
+
+                <div class="reveal d-200 event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 12
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Acheson</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Acheson Business Association Golf Tournament</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual golf tournament hosted by the Acheson Business Association — a great opportunity to connect with local business leaders.</p>
+                </div>
+
+                <div class="reveal d-300 event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 13
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Fred Maddock High School Commencement</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Graduation ceremony for the Class of 2026 at Fred Maddock High School — celebrating the next generation of Drayton Valley leaders.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">
+                        🎓 Graduation
+                    </div>
+                </div>
+
+                <div class="reveal d-400 event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 13
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Fly-In Breakfast — Drayton Valley Flying Club</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A fun community morning at the Drayton Valley Flying Club — pancakes, planes, and good people. A perfect chance to meet residents in a relaxed setting.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-gray-500 font-medium">
+                        ✈️ Community Breakfast
+                    </div>
+                </div>
+
+                <div class="reveal d-500 event-card bg-white rounded-2xl p-6" data-month="june">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jun text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            June 15
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Stony Plain</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">"Fiddle Country" Concert</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A live concert in support of the Spruce Grove Ag Society. Celebrating the musical heritage of rural Alberta with an evening of fiddle music.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">
+                        🎻 Live Music
+                    </div>
+                </div>
+
+                <!-- Canada Day BBQs — featured wide card -->
+                <div class="reveal event-card rounded-2xl p-6 md:col-span-2 lg:col-span-3" style="background:linear-gradient(135deg,#003F72 0%,#0a2540 100%);border:none;">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-16 h-16 rounded-2xl bg-white/15 flex flex-col items-center justify-center mx-auto sm:mx-0">
+                                <span class="text-xs font-bold text-white/70 uppercase tracking-wide">June</span>
+                                <span class="text-xl font-black text-white leading-none">29–30</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-full bg-red-500 text-white text-xs font-bold">🍁 Dane's Canada Day BBQs</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Drayton Valley · June 29</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Stony Plain · June 30</span>
+                            </div>
+                            <h3 class="font-bold text-white text-lg mb-2">Dane Lloyd Canada Day BBQs</h3>
+                            <p class="text-blue-200/80 text-sm leading-relaxed">Join Dane for his annual Canada Day BBQs — free food, community, and a chance to connect with your MP. Two locations across the riding over two days.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── JULY ── -->
+        <div class="month-group mb-16" data-month="july">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-jul flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">JUL</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">July 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">6 events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- Canada Day wide card -->
+                <div class="reveal event-card rounded-2xl p-6 md:col-span-2 lg:col-span-3" style="background:linear-gradient(135deg,#7f1d1d 0%,#991b1b 100%);border:none;" data-month="july">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-16 h-16 rounded-2xl bg-white/15 flex flex-col items-center justify-center mx-auto sm:mx-0">
+                                <span class="text-xs font-bold text-white/70 uppercase tracking-wide">July</span>
+                                <span class="text-xl font-black text-white leading-none">1</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-full bg-white/20 text-white text-xs font-bold">🍁 Canada Day</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Spruce Grove</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Stony Plain</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Drayton Valley</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-xs font-medium">Breton</span>
+                            </div>
+                            <h3 class="font-bold text-white text-lg mb-2">Canada Day Celebrations</h3>
+                            <p class="text-red-100/80 text-sm leading-relaxed">Canada Day festivities across Parkland riding — fireworks, parades, and community celebrations in Spruce Grove, Stony Plain, Drayton Valley, and Breton.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal d-100 event-card bg-white rounded-2xl p-6" data-month="july">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jul text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            July 10–12
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Spruce Grove</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Grove Rotary Ribfest</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Three days of BBQ, live music, and community fun hosted by the Rotary Club of Spruce Grove. One of the riding's most popular summer events.</p>
+                    <div class="mt-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lime/20 text-green-700 text-xs font-semibold">Multi-Day</div>
+                </div>
+
+                <div class="reveal d-200 event-card bg-white rounded-2xl p-6" data-month="july">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jul text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            July 10–11
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Evansburg</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Pembina Valley Daze</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A two-day community festival celebrating the Pembina Valley region — entertainment, activities, and local pride in Evansburg.</p>
+                    <div class="mt-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lime/20 text-green-700 text-xs font-semibold">Multi-Day</div>
+                </div>
+
+                <div class="reveal d-300 event-card bg-white rounded-2xl p-6" data-month="july">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-jul text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            July 17
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Drayton Valley / Brazeau County Charity Golf Classic</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual charity golf tournament supporting local causes in Drayton Valley and Brazeau County — a great day on the course for a great cause.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">⛳ Charity Golf</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── AUGUST ── -->
+        <div class="month-group mb-16" data-month="august">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-aug flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">AUG</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">August 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">4 events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="reveal event-card bg-white rounded-2xl p-6" data-month="august">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-aug text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            August 1
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Peers</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Gold Dust Days</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual summer celebration in the community of Peers — a small-town Alberta tradition full of local charm and community spirit.</p>
+                </div>
+
+                <div class="reveal d-100 event-card bg-white rounded-2xl p-6" data-month="august">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-aug text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            August 16
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Wildwood</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Wildwood Fair</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">The Wildwood community fair — agricultural exhibits, family activities, and the best of small-town Alberta summer.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-green-700 font-semibold">🌾 Agricultural Fair</div>
+                </div>
+
+                <div class="reveal d-200 event-card bg-white rounded-2xl p-6" data-month="august">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-aug text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            August 21
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Small Town Big Life Street Party</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Drayton Valley's signature summer street party — live entertainment, local vendors, and the energy that makes small-town Alberta life so special.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">🎉 Street Festival</div>
+                </div>
+
+                <div class="reveal d-300 event-card bg-white rounded-2xl p-6" data-month="august">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-aug text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            August 21
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Drayton Valley</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Big West Days — Rodeo</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Drayton Valley's Big West Days rodeo — a classic Alberta event celebrating western heritage, horsemanship, and community pride.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-amber-700 font-semibold">🤠 Rodeo</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── SEPTEMBER ── -->
+        <div class="month-group mb-6" data-month="september">
+            <div class="month-header pb-4 mb-8 reveal">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl badge-sep flex flex-col items-center justify-center flex-shrink-0">
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-70">2026</span>
+                        <span class="text-lg font-black leading-none">SEP</span>
+                    </div>
+                    <div>
+                        <h2 class="font-display text-3xl font-bold text-navy-dark">September 2026</h2>
+                        <p class="text-gray-400 text-sm mt-0.5">2 events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="reveal event-card bg-white rounded-2xl p-6 md:col-span-2" data-month="september">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-sep text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Sept 11–13
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Spruce Grove</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Spruce Grove Ag Society Agra Fair 2026</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">The Spruce Grove Ag Society's flagship event — three days of agricultural exhibits, competitions, entertainment, and everything that makes Parkland's farming community proud.</p>
+                    <div class="mt-3 flex gap-2">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lime/20 text-green-700 text-xs font-semibold">Multi-Day</span>
+                        <span class="inline-flex items-center gap-1.5 text-xs text-green-700 font-semibold">🌾 Agricultural Fair</span>
+                    </div>
+                </div>
+
+                <div class="reveal d-100 event-card bg-white rounded-2xl p-6" data-month="september">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-sep text-xs font-bold">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Sept 26
+                        </span>
+                        <span class="text-xs text-gray-400 font-medium bg-gray-50 px-2.5 py-1 rounded-full">Acheson</span>
+                    </div>
+                    <h3 class="font-bold text-navy-dark text-base mb-2 leading-snug">Acheson Business Awards Gala</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Annual gala recognizing excellence in business across the Acheson industrial area — celebrating the entrepreneurs and employers who drive Parkland's economy.</p>
+                    <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-accent font-semibold">🏆 Business Awards</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-bg py-20 relative overflow-hidden">
+    <div class="absolute inset-0 hero-grain opacity-5 pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="reveal flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="text-center lg:text-left">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-3">Know of an event we missed?</h2>
+                <p class="text-blue-200/80 text-lg max-w-xl">Dane's office is always looking to connect with communities across Parkland riding. If you'd like to invite Dane to your event or organization, get in touch.</p>
+            </div>
+            <div class="flex flex-wrap gap-4 justify-center flex-shrink-0">
+                <a href="mailto:dane.lloyd@parl.gc.ca?subject=Event%20Invitation%20%E2%80%94%20Parkland%20Riding" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-white text-navy font-bold text-base shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Invite Dane to Your Event
+                </a>
+                <a href="stay-informed.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-semibold text-base hover:bg-white/20 transition-all duration-300">
+                    Stay Informed
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-navy-xdark pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+            <img src="../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp" alt="Dane Lloyd MP" class="h-10 mb-5">
+            <p class="text-blue-300/70 text-sm leading-relaxed mb-6">Proudly serving the people of Parkland, Alberta in the House of Commons.</p>
+            <div class="flex gap-2.5">
+                <a href="https://www.facebook.com/DaneLloydCPC" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="https://x.com/danelloydmp" target="_blank" rel="noopener" aria-label="X / Twitter" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/danelloydcpc/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCQpCRvUGwDKXUi6l9Ht0SNg" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-white/8 hover:bg-white/15 flex items-center justify-center transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Navigate</h4>
+            <ul class="space-y-3">
+                <li><a href="index.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Home</a></li>
+                <li><a href="about.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">About Dane</a></li>
+                <li><a href="community-news.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Community News</a></li>
+                <li><a href="events.html" class="text-white text-sm font-medium">Events</a></li>
+                <li><a href="media.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Media</a></li>
+                <li><a href="stay-informed.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Stay Informed</a></li>
+                <li><a href="contact.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Contact Dane</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Constituency Office</h4>
+            <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                <p>#102-4807 44 Avenue<br>Stony Plain, AB T7Z 1V5</p>
+                <p><a href="tel:+17808232050" class="hover:text-white transition-colors">(780) 823-2050</a></p>
+                <p>Fax: (780) 823-2055</p>
+                <p><a href="mailto:dane.lloyd@parl.gc.ca" class="hover:text-white transition-colors">dane.lloyd@parl.gc.ca</a></p>
+            </address>
+        </div>
+        <div>
+            <h4 class="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">Parliament Hill</h4>
+            <address class="not-italic text-blue-200/70 text-sm space-y-2.5 leading-relaxed">
+                <p>House of Commons<br>Ottawa, Ontario K1A 0A6</p>
+                <p>Conservative Party of Canada</p>
+                <p class="pt-1 text-blue-300/50 text-xs">Shadow Minister<br>Emergency Preparedness &amp;<br>Community Resilience</p>
+            </address>
+        </div>
+    </div>
+    <div class="border-t border-white/8 mt-14 pt-8 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-blue-300/40 text-sm">&copy; 2026 Dane Lloyd, MP. All rights reserved.</p>
+        <div class="flex items-center gap-4 text-blue-300/40 text-xs">
+            <span>Parkland, Alberta</span>
+            <span class="w-1 h-1 rounded-full bg-blue-300/30"></span>
+            <span>House of Commons</span>
+        </div>
+    </div>
+</footer>
+
+
+<!-- CHAT WIDGET -->
+<div class="fixed bottom-6 right-6 z-50" id="chatWidget">
+    <button id="chatToggle" class="relative w-14 h-14 rounded-full text-white shadow-2xl shadow-navy/40 flex items-center justify-center hover:scale-105 transition-transform" style="background:linear-gradient(135deg,#003F72,#0a2540)" aria-label="Open chat">
+        <svg id="chatIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <svg id="chatIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-lime rounded-full border-2 border-navy-xdark"></span>
+    </button>
+    <div id="chatPanel" class="absolute bottom-[72px] right-0 w-[340px] max-w-[calc(100vw-48px)] h-[460px] rounded-2xl shadow-2xl shadow-black/20 flex-col overflow-hidden">
+        <div style="background:linear-gradient(135deg,#003F72,#0a2540)" class="px-5 py-4 flex items-center gap-3">
+            <div class="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-white/10">
+                <img src="https://danelloyd.ca/templates/yootheme/cache/7d/2025-0522-SVL-03-013-7db948e7.webp" alt="Dane" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="font-semibold text-sm text-white">Dane Lloyd's Office</div>
+                <div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span><span class="text-xs text-blue-200/80">Online</span></div>
+            </div>
+            <button id="chatClose" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white text-lg leading-none" aria-label="Close">&times;</button>
+        </div>
+        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50 flex flex-col">
+            <div class="max-w-[85%] p-3.5 rounded-2xl rounded-tl-sm bg-white text-gray-700 text-sm shadow-sm leading-relaxed">
+                Hi! Looking for a community event? How can we help?
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                    <button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button>
+                    <button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button>
+                    <button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button>
+                    <button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-3 bg-white border-t border-gray-100 flex flex-col gap-2">
+            <input id="chatEmail" type="email" placeholder="Your email (required)"
+                   class="w-full px-4 py-2 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+            <div class="flex gap-2 items-center">
+                <input id="chatInput" type="text" placeholder="Type your message…" maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+                <button id="chatSend" class="w-9 h-9 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function() {
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        var m = document.getElementById('mobileMenu');
+        var open = m.classList.toggle('open');
+        this.setAttribute('aria-expanded', open);
+    });
+
+    var ro = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+
+    // Month filter
+    window.filterEvents = function(month) {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelector('[data-filter="' + month + '"]').classList.add('active');
+        if (month === 'all') {
+            document.querySelectorAll('.month-group').forEach(function(g) { g.style.display = ''; });
+        } else {
+            document.querySelectorAll('.month-group').forEach(function(g) {
+                g.style.display = g.dataset.month === month ? '' : 'none';
+            });
+        }
+    };
+
+    // Chat widget
+    (function() {
+        var panel = document.getElementById('chatPanel');
+        var msgs  = document.getElementById('chatMessages');
+        var input = document.getElementById('chatInput');
+        var iconOpen  = document.getElementById('chatIconOpen');
+        var iconClose = document.getElementById('chatIconClose');
+        var isOpen = false;
+        var replies = {
+            contact:    { q: 'How do I contact Dane?', a: 'Call <strong>(780) 823-2050</strong> or visit the <a href="contact.html" class="underline font-medium text-navy">Contact page</a>.' },
+            about:      { q: 'Tell me about Dane', a: 'Dane Lloyd is the MP for Parkland, Alberta. Read his full bio on the <a href="about.html" class="underline font-medium text-navy">About page</a>.' },
+            newsletter: { q: 'How do I stay informed?', a: 'Sign up on the <a href="stay-informed.html" class="underline font-medium text-navy">Stay Informed page</a>.' },
+            events:     { q: 'What events are coming up?', a: 'You\'re already on the Events page! Scroll through the calendar or use the month filters above.' },
+            fallback:   { a: 'Thanks for your message! Call <strong>(780) 823-2050</strong> or use the <a href="contact.html" class="underline font-medium text-navy">Contact page</a>.' }
+        };
+        function chips() { return '<div class="flex flex-wrap gap-1.5 mt-3"><button data-reply="contact" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Contact Dane</button><button data-reply="about" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">About Dane</button><button data-reply="newsletter" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">Stay Informed</button><button data-reply="events" class="chip px-3 py-1.5 rounded-full bg-slate-100 hover:bg-navy hover:text-white text-xs font-medium transition">News &amp; Events</button></div>'; }
+        function addMsg(text, isUser) { var d = document.createElement('div'); d.className = 'max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed ' + (isUser ? 'bg-navy text-white self-end ml-auto rounded-tr-sm' : 'bg-white text-gray-700 shadow-sm rounded-tl-sm'); if (isUser) d.textContent = text; else d.innerHTML = text + chips(); msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function handle(key) { var r = replies[key] || replies.fallback; if (r.q) addMsg(r.q, true); setTimeout(function() { addMsg(r.a, false); }, 380); }
+        function togglePanel() { isOpen = !isOpen; if (isOpen) panel.classList.add('open'); else panel.classList.remove('open'); iconOpen.classList.toggle('hidden', isOpen); iconClose.classList.toggle('hidden', !isOpen); }
+        document.getElementById('chatToggle').addEventListener('click', togglePanel);
+        document.getElementById('chatClose').addEventListener('click', function() { isOpen = true; togglePanel(); });
+        function send() {
+            var email = (document.getElementById('chatEmail').value || '').trim();
+            var t = (input.value || '').trim();
+            if (!email) { addMsg("Please enter your email above first.", false); return; }
+            if (!t) return;
+            input.value = '';
+            addMsg(t, true);
+            var params = new URLSearchParams({ formType: 'chat', email: email, message: t });
+            fetch('/contact-submit.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+            }).then(function(r) { return r.json().then(function(j) { return { ok: r.ok, json: j }; }); })
+            .then(function(res) {
+                if (res.json.ok) {
+                    addMsg("Thanks! Dane's team will get back to you soon.", false);
+                    document.getElementById('chatEmail').value = '';
+                } else {
+                    addMsg("Could not send. Please try the contact form or call (780) 823-2050.", false);
+                }
+            }).catch(function() {
+                addMsg("Could not send. Please try the contact form or call (780) 823-2050.", false);
+            });
+        }
+        document.getElementById('chatSend').addEventListener('click', send);
+        input.addEventListener('keydown', function(e) { if (e.key === 'Enter') send(); });
+        msgs.addEventListener('click', function(e) { var btn = e.target.closest('[data-reply]'); if (btn) handle(btn.dataset.reply); });
+        if (!sessionStorage.getItem('chatOpened')) { setTimeout(function() { if (!isOpen) { togglePanel(); sessionStorage.setItem('chatOpened', '1'); } }, 4000); }
+    })();
+})();
+</script>
+</body>
+</html>

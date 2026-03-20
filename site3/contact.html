@@ -75,6 +75,7 @@
                 <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Home</a>
                 <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">About Dane</a>
                 <a href="community-news.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Community News</a>
+                <a href="events.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Events</a>
                 <a href="media.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Media</a>
                 <a href="stay-informed.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors">Stay Informed</a>
                 <a href="contact.html" class="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy shadow-md hover:bg-blue-50 transition-all hover:-translate-y-px">
@@ -94,6 +95,7 @@
             <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Home</a>
             <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">About Dane</a>
             <a href="community-news.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Community News</a>
+            <a href="events.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Events</a>
             <a href="media.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Media</a>
             <a href="stay-informed.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Stay Informed</a>
             <a href="contact.html" class="block mt-2 px-4 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white text-center">Contact Dane</a>
@@ -262,66 +264,67 @@
                 <p class="text-gray-500 text-lg leading-relaxed mb-10">Whether you have a federal issue, want to share your thoughts, or need help navigating a government program — Dane's team is ready to assist.</p>
 
                 <form id="contactForm" onsubmit="handleContact(event)" class="space-y-5">
+                    <input type="hidden" name="formType" value="contact">
                     <div class="grid sm:grid-cols-2 gap-5">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">First Name <span class="text-red-400">*</span></label>
-                            <input type="text" required placeholder="John" class="input-field">
+                            <input type="text" name="firstName" required placeholder="John" class="input-field">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name <span class="text-red-400">*</span></label>
-                            <input type="text" required placeholder="Smith" class="input-field">
+                            <input type="text" name="lastName" required placeholder="Smith" class="input-field">
                         </div>
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address <span class="text-red-400">*</span></label>
-                        <input type="email" required placeholder="you@example.com" class="input-field">
+                        <input type="email" name="email" required placeholder="you@example.com" class="input-field">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number <span class="text-gray-400 font-normal">(optional)</span></label>
-                        <input type="tel" placeholder="(780) 555-0100" class="input-field">
+                        <input type="tel" name="phone" placeholder="(780) 555-0100" class="input-field">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Community</label>
-                        <select class="input-field">
+                        <select name="community" class="input-field">
                             <option value="">Select your community</option>
-                            <option>Spruce Grove</option>
-                            <option>Stony Plain</option>
-                            <option>Parkland County</option>
-                            <option>Drayton Valley</option>
-                            <option>Brazeau County</option>
-                            <option>Mayerthorpe</option>
-                            <option>Lac Ste. Anne County</option>
-                            <option>Yellowhead County</option>
-                            <option>Evansburg</option>
-                            <option>Enoch</option>
-                            <option>Entwistle</option>
-                            <option>Breton</option>
-                            <option>Cynthia</option>
-                            <option>Kapasiwin</option>
-                            <option>Lodgepole</option>
-                            <option>Seba Beach</option>
-                            <option>Tomahawk</option>
-                            <option>Wildwood</option>
-                            <option>Other</option>
+                            <option value="Spruce Grove">Spruce Grove</option>
+                            <option value="Stony Plain">Stony Plain</option>
+                            <option value="Parkland County">Parkland County</option>
+                            <option value="Drayton Valley">Drayton Valley</option>
+                            <option value="Brazeau County">Brazeau County</option>
+                            <option value="Mayerthorpe">Mayerthorpe</option>
+                            <option value="Lac Ste. Anne County">Lac Ste. Anne County</option>
+                            <option value="Yellowhead County">Yellowhead County</option>
+                            <option value="Evansburg">Evansburg</option>
+                            <option value="Enoch">Enoch</option>
+                            <option value="Entwistle">Entwistle</option>
+                            <option value="Breton">Breton</option>
+                            <option value="Cynthia">Cynthia</option>
+                            <option value="Kapasiwin">Kapasiwin</option>
+                            <option value="Lodgepole">Lodgepole</option>
+                            <option value="Seba Beach">Seba Beach</option>
+                            <option value="Tomahawk">Tomahawk</option>
+                            <option value="Wildwood">Wildwood</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Subject <span class="text-red-400">*</span></label>
-                        <select required class="input-field">
+                        <select name="subject" required class="input-field">
                             <option value="">Select a topic</option>
-                            <option>Constituent Issue / Case Work</option>
-                            <option>Request a Meeting</option>
-                            <option>Federal Government Program</option>
-                            <option>Passport / Immigration</option>
-                            <option>Community Event / Invitation</option>
-                            <option>Media Inquiry</option>
-                            <option>General Feedback</option>
-                            <option>Other</option>
+                            <option value="Constituent Issue / Case Work">Constituent Issue / Case Work</option>
+                            <option value="Request a Meeting">Request a Meeting</option>
+                            <option value="Federal Government Program">Federal Government Program</option>
+                            <option value="Passport / Immigration">Passport / Immigration</option>
+                            <option value="Community Event / Invitation">Community Event / Invitation</option>
+                            <option value="Media Inquiry">Media Inquiry</option>
+                            <option value="General Feedback">General Feedback</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Message <span class="text-red-400">*</span></label>
-                        <textarea required rows="5" placeholder="Tell us how we can help…" class="input-field resize-none"></textarea>
+                        <textarea name="message" required rows="5" placeholder="Tell us how we can help…" class="input-field resize-none"></textarea>
                     </div>
                     <button type="submit"
                         class="w-full flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-navy text-white font-bold text-sm shadow-lg shadow-navy/25 hover:bg-navy-dark hover:-translate-y-px hover:shadow-xl transition-all duration-200">
@@ -440,6 +443,7 @@
                 <li><a href="index.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Home</a></li>
                 <li><a href="about.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">About Dane</a></li>
                 <li><a href="community-news.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Community News</a></li>
+                <li><a href="events.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Events</a></li>
                 <li><a href="media.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Media</a></li>
                 <li><a href="stay-informed.html" class="text-blue-200/70 hover:text-white text-sm transition-colors">Stay Informed</a></li>
                 <li><a href="contact.html" class="text-white text-sm font-medium">Contact Dane</a></li>
@@ -488,7 +492,7 @@
             </div>
             <div class="flex-1 min-w-0">
                 <div class="font-semibold text-sm text-white">Dane Lloyd's Office</div>
-                <div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span><span class="text-xs text-blue-200/80">Online · Demo mode</span></div>
+                <div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span><span class="text-xs text-blue-200/80">Online</span></div>
             </div>
             <button id="chatClose" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white text-lg leading-none" aria-label="Close">&times;</button>
         </div>
@@ -503,9 +507,12 @@
                 </div>
             </div>
         </div>
-        <div class="px-4 py-3 bg-white border-t border-gray-100 flex gap-2 items-center">
-            <input id="chatInput" type="text" placeholder="Type a message…" maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
-            <button id="chatSend" class="w-9 h-9 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
+        <div class="px-4 py-3 bg-white border-t border-gray-100 flex flex-col gap-2">
+            <input id="chatEmail" type="email" placeholder="Your email (required)"
+                   class="w-full px-4 py-2 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+            <div class="flex gap-2 items-center">
+                <input id="chatInput" type="text" placeholder="Type your message…" maxlength="200" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-navy transition-colors bg-slate-50">
+                <button id="chatSend" class="w-9 h-9 rounded-full bg-navy text-white hover:bg-navy-dark flex items-center justify-center transition" aria-label="Send">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </button>
         </div>
@@ -528,8 +535,33 @@
 
     window.handleContact = function(e) {
         e.preventDefault();
-        document.getElementById('contactForm').classList.add('hidden');
-        document.getElementById('contactSuccess').classList.remove('hidden');
+        var form = document.getElementById('contactForm');
+        var success = document.getElementById('contactSuccess');
+        var btn = form.querySelector('button[type="submit"]');
+        var origText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="animate-pulse">Submitting, please wait…</span>';
+        var fd = new FormData(form);
+        var params = new URLSearchParams(fd);
+        fetch('/contact-submit.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params.toString()
+        }).then(function(r) { return r.json().then(function(j) { return { ok: r.ok, json: j }; }); })
+        .then(function(res) {
+            if (res.json.ok) {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+            } else {
+                alert(res.json.error || 'Something went wrong. Please try again or call (780) 823-2050.');
+                btn.disabled = false;
+                btn.innerHTML = origText;
+            }
+        }).catch(function() {
+            alert('Could not send your message. Please try again or call (780) 823-2050.');
+            btn.disabled = false;
+            btn.innerHTML = origText;
+        });
     };
 
     (function() {
@@ -552,7 +584,30 @@
         function togglePanel() { isOpen = !isOpen; if (isOpen) panel.classList.add('open'); else panel.classList.remove('open'); iconOpen.classList.toggle('hidden', isOpen); iconClose.classList.toggle('hidden', !isOpen); }
         document.getElementById('chatToggle').addEventListener('click', togglePanel);
         document.getElementById('chatClose').addEventListener('click', function() { isOpen = true; togglePanel(); });
-        function send() { var t = (input.value || '').trim(); if (!t) return; input.value = ''; addMsg(t, true); var k = 'fallback', l = t.toLowerCase(); for (var key in replies) { if (key !== 'fallback' && l.indexOf(key) >= 0) { k = key; break; } } setTimeout(function() { addMsg(replies[k].a, false); }, 380); }
+        function send() {
+            var email = (document.getElementById('chatEmail').value || '').trim();
+            var t = (input.value || '').trim();
+            if (!email) { addMsg("Please enter your email above first.", false); return; }
+            if (!t) return;
+            input.value = '';
+            addMsg(t, true);
+            var params = new URLSearchParams({ formType: 'chat', email: email, message: t });
+            fetch('/contact-submit.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+            }).then(function(r) { return r.json().then(function(j) { return { ok: r.ok, json: j }; }); })
+            .then(function(res) {
+                if (res.json.ok) {
+                    addMsg("Thanks! Dane's team will get back to you soon.", false);
+                    document.getElementById('chatEmail').value = '';
+                } else {
+                    addMsg("Could not send. Please try the contact form or call (780) 823-2050.", false);
+                }
+            }).catch(function() {
+                addMsg("Could not send. Please try the contact form or call (780) 823-2050.", false);
+            });
+        }
         document.getElementById('chatSend').addEventListener('click', send);
         input.addEventListener('keydown', function(e) { if (e.key === 'Enter') send(); });
         msgs.addEventListener('click', function(e) { var btn = e.target.closest('[data-reply]'); if (btn) handle(btn.dataset.reply); });

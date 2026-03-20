@@ -1,0 +1,4 @@
+# Deny direct access to email.json
+<Files "email.json">
+    Require all denied
+</Files>

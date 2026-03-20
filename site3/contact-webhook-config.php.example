@@ -1,0 +1,14 @@
+<?php
+/**
+ * Rocket.Chat webhook config for contact form.
+ * Copy to contact-webhook-config.php and set your webhook URL.
+ *
+ * To create the webhook:
+ * 1. Rocket.Chat Admin → Integrations → New → Incoming Webhook
+ * 2. Name: Dane Lloyd Contact Form
+ * 3. Post to channel: #dane_lloyd
+ * 4. Copy the webhook URL (e.g. https://swiftapp.ca/hooks/xxxxx/yyyyy)
+ */
+return [
+    'webhook_url' => 'https://swiftapp.ca/hooks/YOUR_WEBHOOK_ID/YOUR_TOKEN',
+];
