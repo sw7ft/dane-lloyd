@@ -64,6 +64,57 @@ $community = trim($input['community'] ?? '');
 $subject   = trim($input['subject'] ?? '');
 $message   = trim($input['message'] ?? '');
 
+// ── Spam prevention (PHP-only, no external services) ──
+$honeypot = trim($input['website'] ?? $input['url'] ?? $input['company_name'] ?? '');
+if (!empty($honeypot)) {
+    http_response_code(200);
+    echo json_encode(['ok' => true]);
+    exit;
+}
+
+$formLoadTime = (float)($input['formLoadTime'] ?? 0);
+if ($formLoadTime > 0 && (microtime(true) - $formLoadTime) < 3) {
+    http_response_code(429);
+    echo json_encode(['ok' => false, 'error' => 'Please wait a moment before submitting.']);
+    exit;
+}
+
+$clientIp = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+$clientIp = trim(explode(',', $clientIp)[0]);
+if (!empty($clientIp)) {
+    $rateFile = sys_get_temp_dir() . '/danelloyd_rate_' . md5($clientIp);
+    $now = time();
+    $window = 3600;
+    $maxPerHour = 5;
+    $submissions = [];
+    if (file_exists($rateFile)) {
+        $raw = @file_get_contents($rateFile);
+        $submissions = $raw ? array_filter(array_map('intval', explode("\n", trim($raw)))) : [];
+    }
+    $submissions = array_filter($submissions, fn($t) => $t > $now - $window);
+    if (count($submissions) >= $maxPerHour) {
+        http_response_code(429);
+        echo json_encode(['ok' => false, 'error' => 'Too many submissions. Please try again later.']);
+        exit;
+    }
+    $submissions[] = $now;
+    @file_put_contents($rateFile, implode("\n", $submissions) . "\n", LOCK_EX);
+}
+
+if (!empty($message)) {
+    $urlCount = preg_match_all('#https?://\S+#', $message, $m) ? count($m[0]) : 0;
+    if ($urlCount > 2) {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => 'Please limit links in your message.']);
+        exit;
+    }
+    if (strlen($message) > 2000) {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => 'Message is too long.']);
+        exit;
+    }
+}
+
 // Detect form type: explicit formType, contact has message, or chat has email+message
 $formType = trim($input['formType'] ?? '');
 $isContact = ($formType === 'contact') || !empty($message);
