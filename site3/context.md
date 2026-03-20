@@ -404,9 +404,32 @@ All paths from `site3/` use `../` prefix.
 - White (dark navbar / footer): `../templates/yootheme/cache/1a/Asset-64x-White-1acff90f.webp`
 - Favicon: `../images/yootheme/icons/96x96-favicon.png`
 
-**Dane Photos:**
+**Dane Photos — New (organized in `site3/images/dane/`):**
+
+| File | Dimensions | Best Use |
+|---|---|---|
+| `images/dane/daneLlyod1.jpg` | 3000×1983 | About page portrait (current) |
+| `images/dane/daneLlyod2.jpg` | 3000×2093 | About page photo grid — large featured |
+| `images/dane/daneLlyod3.jpg` | 3225×2170 | About page full-width strip background |
+| `images/dane/daneLlyod4.jpg` | 3000×1923 | Media page gallery — wide featured |
+| `images/dane/082A0328.JPG` | 1586×1132 | General professional |
+| `images/dane/082A0335.JPG` | 1543×1106 | Homepage social strip |
+| `images/dane/082A0352.JPG` | 1702×1145 | General professional |
+| `images/dane/082A0361.JPG` | 1796×1225 | About page photo grid |
+| `images/dane/082A0370.JPG` | 1733×1166 | Media page gallery |
+| `images/dane/082A0390.JPG` | 1722×1227 | About page photo grid |
+| `images/dane/082A0392.JPG` | 1920×1280 | About page photo grid |
+| `images/dane/082A0429.JPG` | 1520×1057 | Homepage social strip |
+| `images/dane/082A3052.JPEG` | 1280×898 | Homepage social strip |
+| `images/dane/082A3121.JPEG` | 1600×1068 | About page photo grid |
+| `images/dane/082A7907.JPEG` | 1804×1223 | Media page gallery |
+| `images/dane/082A8220.JPEG` | 1600×1067 | Media page gallery |
+| `images/dane/082A8257.JPEG` | 1600×1067 | Media page gallery |
+| `images/dane/IMG_*.JPG` | 4000–5700px | Community/event photos (phone) |
+
+**Dane Photos — Legacy (danelloyd.ca CDN):**
 - Professional portrait (hero): `https://danelloyd.ca/templates/yootheme/cache/7d/2025-0522-SVL-03-013-7db948e7.webp`
-- About page portrait: `../templates/yootheme/cache/10/Dane-About-2-1042d532.jpeg`
+- About page portrait (old): `../templates/yootheme/cache/10/Dane-About-2-1042d532.jpeg`
 - Wedding/family: `../templates/yootheme/cache/47/Dane-Lloyd-Wedding-47753706.jpeg`
 - House of Commons: `../templates/yootheme/cache/c1/Home-Header-Image-Dane-HOC-Scheer-Mobile-c10ece55.jpeg`
 
